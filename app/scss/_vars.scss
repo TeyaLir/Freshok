@@ -1,39 +1,57 @@
-%openSans-Light {
+// Лучшего имя для переменной чем white придумать не могла. Не знаю как её лучше было назвать...
+$white: #ffffff;
+$bg-color: #f6f6f6;
+$base-bg: #31352b;
+$base-accent: #63a60f;
+$title: #121212;
+$text: #505050;
+$accent-first: #cf3e3b;
+$hover: #e0edcf;
+$border: #c1c1c1;
+
+%bg-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// Fonts
+%openSans-300 {
   font-family: 'OpenSans-Light', sans-serif;
   font-weight: 300;
 }
 
-%openSans-Regular {
+%openSans-400 {
   font-family: 'OpenSans-Regular', sans-serif;
   font-weight: 400;
 }
 
-%openSans-SemiBold {
+%openSans-600 {
   font-family: 'OpenSans-SemiBold', sans-serif;
   font-weight: 600;
 }
 
-%openSans-Bold {
+%openSans-700 {
   font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;
 }
 
-%ruda-Regular {
+%ruda-400 {
   font-family: 'Ruda-Regular', sans-serif;
   font-weight: 400;
 }
 
-%ruda-SemiBold {
+%ruda-600 {
   font-family: 'Ruda-SemiBold', sans-serif;
   font-weight: 600;
 }
 
-%ruda-SemiBold {
-  font-family: 'Ruda-SemiBold', sans-serif;
+%ruda-700 {
+  font-family: 'Ruda-Bold', sans-serif;
   font-weight: 700;
 }
 
-%ruda-Black {
+%ruda-900 {
   font-family: 'Ruda-Black', sans-serif;
   font-weight: 900;
 }
