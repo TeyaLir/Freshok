@@ -68,7 +68,7 @@
 }
 
 .product-catalog {
-  position: relative;  
+  position: relative;
 
   .product-catalog__title {
     position: relative;
@@ -96,7 +96,7 @@
       background-image: url('../images/icons/nav-catalog.png');
       @extend %bg-icon;
     }
-  
+
     &::after {
       content: "";
       position: absolute;
@@ -107,9 +107,8 @@
       width: 8px;
       background-image: url('../images/icons/arrow-down.svg');
       @extend %bg-icon;
-      transition: transform 0.1s;
     }
-  
+
     &:hover {
       background-color: $hover;
     }
@@ -175,15 +174,10 @@
     height: 20px;
     background-image: url('../images/icons/search.svg');
     @extend %bg-icon;
-    z-index: 2;
+    z-index: 3;
   }
 
   &__input {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    outline: transparent;
-
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.06em;
@@ -201,19 +195,9 @@
     &::placeholder {
       color: $base-bg;
     }
-
-    &:focus {
-      box-shadow: 0 0 0 4px #b1d386;
-      z-index: 2;
-    }
   }
 
   &__btn {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    outline: transparent;
-
     @extend %openSans-600;
     font-size: 14px;
     line-height: 1.4;
