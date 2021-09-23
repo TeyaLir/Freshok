@@ -67,11 +67,7 @@ footer {
   }
 
   &__link {
-    transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
+    @extend %hover-opacity;
   }
 }
 
@@ -91,11 +87,7 @@ footer {
     height: 32px;
     width: 32px;
     @extend %bg-icon;
-    transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
+    @extend %hover-opacity;
   }
 }
 
