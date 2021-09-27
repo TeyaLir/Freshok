@@ -1,4 +1,5 @@
 .top-slider {
+  background-color: $bg-color;
   &__item {
     height: 600px;
     @extend %bg-img;

@@ -4,13 +4,18 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {
     position: relative;
     width: 264px;
     padding-left: 75px;
+    margin-right: 65px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &::before {
       content: "";

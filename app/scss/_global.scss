@@ -61,18 +61,19 @@ body {
 }
 
 .btn-states,
-.btn-states--base {
+.btn-states--base,
+.btn-border {
   border: 0;
   outline: transparent;
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, box-shadow 0.3s;
 
+  &:focus {
+    box-shadow: 0 0 0 4px #b1d386;
+  }
+
   &:active {
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: rgba($white, 0.5);
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 4px #b1d386;
   }
 }
 
@@ -80,10 +81,33 @@ body {
   &:hover {
     background-color: rgba($base-bg, 0.85);
   }
+
+  &:active {
+    background-color: $base-bg;
+  }
 }
 
 .btn-states--base {
   &:hover {
     background-color: $base-accent--active;
+  }
+
+  &:active {
+    background-color: $base-accent;
+  }
+}
+
+.btn-border {
+  color: $base-accent;
+  background-color: $white;
+  border: 1px solid $base-accent;
+
+  &:hover {
+    background-color: $base-accent--bg;
+  }
+
+  &:active {
+    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+    color: rgba($base-accent, 0.5);
   }
 }
