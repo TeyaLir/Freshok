@@ -24,6 +24,12 @@ body {
   margin: 0 auto;
 }
 
+.container-fluid {
+  max-width: 955px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
