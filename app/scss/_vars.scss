@@ -1,0 +1,84 @@
+// Лучшего имя для переменной чем white придумать не могла. Не знаю как её лучше было назвать...
+$white: #ffffff;
+$bg-color: #f6f6f6;
+$base-bg: #31352b;
+$base-accent: #63a60f;
+$base-accent--active: #4d800c;
+$base-accent--bg: #eff6e7;
+$title: #121212;
+$text: #505050;
+$accent-first: #cf3e3b;
+$accent-second: #ffb800;
+$hover: #e0edcf;
+$border: #c1c1c1;
+
+%bg-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+%bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%hover-opacity {
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+%hover-icon {
+  background-color: transparent;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: rgba(transparent, 0.1);
+  }
+}
+
+// Fonts
+%openSans-300 {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 300;
+}
+
+%openSans-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%openSans-600 {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%openSans-700 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-400 {
+  font-family: 'Ruda-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%ruda-600 {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%ruda-700 {
+  font-family: 'Ruda-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-900 {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
+}
