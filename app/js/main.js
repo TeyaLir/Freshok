@@ -13,5 +13,8 @@ $(function(){
     // autoplay: true,
     // autoplaySpeed: 5000,
   });
+
+  // MixItUp для топовых товаров
+  var mixer = mixitup('.goods__content');
   
 });
