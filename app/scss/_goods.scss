@@ -36,10 +36,13 @@
     border-bottom: 3px solid transparent;
     transition: border-bottom 0.3s;
 
-    &:hover,
-    &:active {
+    &:hover {
       border-bottom: 3px solid rgba($base-accent, 0.2);
     }
+  }
+
+  .mixitup-control-active {
+    border-bottom: 3px solid rgba($base-accent, 0.2);
   }
 
   &__content {
@@ -84,7 +87,6 @@
   }
 
   &__badge {
-    // display: inline-block;
     align-self: flex-start;
     @extend %openSans-700;
     font-size: 10px;
