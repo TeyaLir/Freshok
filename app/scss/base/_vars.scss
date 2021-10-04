@@ -1,0 +1,87 @@
+// Fonts
+$ff-first: 'OpenSans',
+sans-serif;
+$ff-second: 'Ruda',
+sans-serif;
+
+// Внутренние переменные цветов
+$green: #63a60f;
+$green-light: #b1d386;
+$green-lighter: #e0edcf;
+$green-lightest: #eff6e7;
+$green-dark: #4d800c;
+$dark: #121212;
+$dark-light: #31352b;
+$dark-lighter: #505050;
+$silver: #c1c1c1;
+$silver-light: #f6f6f6;
+$red: #cf3e3b;
+$orange: #ff7a00;
+$yellow: #ffb800;
+
+// Глобальные переменные цветов
+$main: $green;
+$main-light: $green-light;
+$main-lighter: $green-lighter;
+$main-lightest: $green-lightest;
+$main-dark: green-dark;
+$base: $dark;
+$base-light: $dark-light;
+$base-lighter: $dark-lighter;
+$bg: $silver;
+$bg-light: $silver-light;
+$accent-first: $red;
+$accent-second: $orange;
+$accent-third: $yellow;
+$white: #ffffff;
+$black: #000000;
+
+
+%bg-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+%bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%focus {
+  border: 0;
+  outline: transparent;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $main-light;
+    z-index: 2;
+  }
+}
+
+@mixin line-clamp--1 {
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin line-clamp--2 {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin line-clamp--3 {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}

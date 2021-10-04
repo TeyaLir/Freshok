@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/OpenSans/OpenSans-Light.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Ruda/Ruda-Regular.woff2') format('woff2'),
+       url('../fonts/Ruda/Ruda-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/Ruda/Ruda-SemiBold.woff2') format('woff2'),
+       url('../fonts/Ruda/Ruda-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Ruda/Ruda-Bold.woff2') format('woff2'),
+       url('../fonts/Ruda/Ruda-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda';
+  font-weight: 900;
+  font-style: normal;
+  src: url('../fonts/Ruda/Ruda-Black.woff2') format('woff2'),
+       url('../fonts/Ruda/Ruda-Black.woff') format('woff');
+  font-display: swap;
+}

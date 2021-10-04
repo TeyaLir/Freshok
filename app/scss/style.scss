@@ -1,14 +1,12 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import './base/vars';
+@import './base/fonts';
+@import './base/reset';
+@import './base/libs';
 
-@import 'header';
-@import 'top-slider';
-@import 'benefits';
-@import 'goods';
+@import './blocks/global';
+@import './blocks/header';
+@import './blocks/top-slider';
+@import './blocks/benefits';
+@import './blocks/goods-top';
 
-@import 'footer';
-
-@import 'media';
+@import './blocks/footer';
