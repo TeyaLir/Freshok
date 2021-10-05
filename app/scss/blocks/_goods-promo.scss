@@ -1,5 +1,6 @@
 .goods-promo {
   text-align: center;
+  background-color: $bg-light;
   padding: 75px 0;
 
   &__content {
@@ -8,8 +9,6 @@
     grid-gap: 30px;
     margin-bottom: 48px;
   }
-
-  &__item {}
 
   .filter__btn {
     letter-spacing: 0.06em;

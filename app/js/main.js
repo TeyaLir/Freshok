@@ -12,6 +12,16 @@ $(function(){
     // autoplaySpeed: 5000,
   });
 
+  $('.brands__list').slick({
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 3
+  });
+
+
+
+
+
   // MixItUp
   var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');
   var containerEl2 = document.querySelector('[data-ref="mixfilter-2"]');
