@@ -1,5 +1,5 @@
 .brands {
-  padding: 70px 0;
+  padding: 70px 0 0;
 
   &__list {
     margin-right: -140px;
@@ -15,8 +15,6 @@
   }
 
   &__img {
-    width: 80px;
-    height: 60px;
     object-fit: contain;
     object-position: center;
   }
