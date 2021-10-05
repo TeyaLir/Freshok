@@ -1,0 +1,15 @@
+.goods-top {
+  text-align: center;
+  padding: 75px 0 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}

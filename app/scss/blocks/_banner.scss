@@ -1,0 +1,66 @@
+.banner {
+  padding: 70px 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    @extend %bg-img;
+    text-transform: uppercase;
+    color: $base-lighter;
+    border-radius: 3px;
+    letter-spacing: 0.01em;
+    padding: 76px 32px 82px;
+
+    &--big {
+      max-width: 630px;
+
+      .banner__item {
+        border-radius: 6px;
+      }
+
+      .banner__title {
+        max-width: 360px;
+      }
+    }
+
+    &--light {
+      color: $white;
+      text-shadow: 1px 1px 0 rgba($black, 0.25);
+
+      .banner__link {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
+
+  &__subtitle {    
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 17px;
+    @include text-overflow;
+  }
+
+  &__title {
+    max-width: 180px;
+    font-family: $ff-second;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    @include line-clamp--2;
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    border-bottom: 2px solid $base-lighter;
+    padding-bottom: 4px;
+  }
+}

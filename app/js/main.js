@@ -1,20 +1,38 @@
 $(function(){
 
   // Каталог продуктов
-  $('.product-catalog__title').on('click', function () {
+  $('.product-catalog__btn').on('click', function () {
     $('.product-catalog__list').toggleClass('product-catalog__list--active');
-    $('.product-catalog__title').toggleClass('product-catalog__title--active');
+    $('.product-catalog__btn').toggleClass('product-catalog__btn--active');
   });
 
   // top-slider
   $('.top-slider__slider').slick({
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-left.svg" alt="стрелка влево"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-right.svg" alt="стрелка вправо"></button>',
     // autoplay: true,
     // autoplaySpeed: 5000,
   });
 
-  // MixItUp для топовых товаров
-  var mixer = mixitup('.goods__content');
+  $('.brands__list').slick({
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 3
+  });
+
+
+
+
+
+  // MixItUp
+  var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');
+  var containerEl2 = document.querySelector('[data-ref="mixfilter-2"]');
+ 
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+ 
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
   
 });

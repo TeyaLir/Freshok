@@ -1,5 +1,5 @@
 .benefits {
-  background-color: $bg-color;
+  background-color: $bg-light;
   padding: 45px 0 30px;
 
   &__inner {
@@ -26,28 +26,31 @@
       height: 50px;
       @extend %bg-icon;
     }
-  }
 
-  &__item--delivery::before {
-    background-image: url('../images/icons/delivery.svg');
-  }
-
-  &__item--return::before {
-    background-image: url('../images/icons/return-box.svg');
-  }
-
-  &__item--hours24::before {
-    background-image: url('../images/icons/hours24.svg');
+    &--delivery::before {
+      background-image: url('../../images/icons/delivery.svg');
+    }
+  
+    &--return::before {
+      background-image: url('../../images/icons/return-box.svg');
+    }
+  
+    &--hours24::before {
+      background-image: url('../../images/icons/hours24.svg');
+    }
   }
 
   &__title {
     font-size: 16px;
-    @extend %openSans-600;
-    color: $title;
+    font-weight: 600;
+    color: $base;
     margin-bottom: 6px;
+    @include text-overflow;
   }
 
   &__text {
+    display: block;
     font-size: 14px;
+    @include line-clamp--2;
   }
 }
