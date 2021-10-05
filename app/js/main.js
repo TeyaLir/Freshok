@@ -12,7 +12,17 @@ $(function(){
     // autoplaySpeed: 5000,
   });
 
-  // MixItUp для топовых товаров
-  var mixer = mixitup('.goods-top__content');
+  // MixItUp
+  var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');
+  var containerEl2 = document.querySelector('[data-ref="mixfilter-2"]');
+ 
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+ 
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
   
 });
