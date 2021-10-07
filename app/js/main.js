@@ -12,13 +12,13 @@ $(function(){
     // autoplaySpeed: 5000,
   });
 
+  // Слайдер брендов
   $('.brands__list').slick({
     arrows: false,
     slidesToShow: 6,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    // autoplay: true
   });
-
-
 
 
 
