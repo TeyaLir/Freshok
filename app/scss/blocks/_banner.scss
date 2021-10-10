@@ -38,7 +38,8 @@
     }
   }
 
-  &__subtitle {    
+  &__subtitle {  
+    display: block;  
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.1em;
@@ -47,13 +48,14 @@
   }
 
   &__title {
+    display: block;
     max-width: 180px;
     font-family: $ff-second;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.4;
     margin-bottom: 7px;
-    @include line-clamp--2;
+    @include line-clamp(2);
   }
 
   &__link {
@@ -61,6 +63,11 @@
     font-size: 14px;
     line-height: 1;
     border-bottom: 2px solid $base-lighter;
+    transition: opacity 0.3s;
     padding-bottom: 4px;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

@@ -29,14 +29,17 @@
 
     &--delivery::before {
       background-image: url('../../images/icons/delivery.svg');
+      // background-image: url('../../images/sprite.svg#delivery');
     }
   
     &--return::before {
       background-image: url('../../images/icons/return-box.svg');
+      // background-image: url('../../images/sprite.svg#return-box');
     }
   
     &--hours24::before {
       background-image: url('../../images/icons/hours24.svg');
+      // background-image: url('../../images/sprite.svg#hours24');
     }
   }
 
@@ -45,12 +48,12 @@
     font-weight: 600;
     color: $base;
     margin-bottom: 6px;
-    @include text-overflow;
+    @include line-clamp(2);
   }
 
   &__text {
     display: block;
     font-size: 14px;
-    @include line-clamp--2;
+    @include line-clamp(3);
   }
 }

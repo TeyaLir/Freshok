@@ -30,7 +30,7 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $base-lighter;
-    @include line-clamp--3;
+    @include line-clamp(3);
   }
 
   &__subtitle {
@@ -42,7 +42,7 @@
   &__text {
     max-width: 780px;
     margin-bottom: 25px;
-    @include line-clamp--1;
+    @include line-clamp(3);
   }
 
   .slick-prev,
@@ -61,7 +61,7 @@
     background-color: rgba($white, 0.8);
     border-radius: 6px;
     border: 1px solid transparent;
-    transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 
     &::after {
       content: "";
@@ -69,15 +69,19 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 19px;
-      height: 32px;
+      width: 100%;
+      height: 100%;
       @extend %bg-icon;
       transition: background-image 0.3s;
+      fill: $base-lighter;
     }
 
     &:hover {
-      color: $main;
-      border: 1px solid $main;
+      background-color: $main-lighter;
+
+      &::after {
+        fill: $main;
+      }
     }
 
     &:focus {
@@ -90,23 +94,23 @@
     z-index: 5;
 
     &::after {
-      background-image: url('../../images/icons/arrow-left.svg');
+      background-image: url('../../images/sprite.svg#arrow-left');
     }
 
-    &:hover::after {
-      background-image: url('../../images/icons/arrow-left--green.svg');
-    }
+    // &:hover::after {
+      // background-image: url('../../images/icon/arrow-left--green');
+    // }
   }
 
   .slick-next {
     right: 3%;
 
     &::after {
-      background-image: url('../../images/icons/arrow-right.svg');
+      background-image: url('../../images/sprite.svg#arrow-right');
     }
 
-    &:hover::after {
-      background-image: url('../../images/icons/arrow-right--green.svg');
-    }
+    // &:hover::after {
+    //   background-image: url('../../images/icon/arrow-right--green');
+    // }
   }
 }

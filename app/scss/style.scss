@@ -1,17 +1,19 @@
-@import './base/vars';
-@import './base/fonts';
-@import './base/reset';
-@import './base/libs';
+@import 'base/vars';
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/libs';
+@import 'base/global';
 
-@import './blocks/global';
-@import './blocks/header';
-@import './blocks/top-slider';
-@import './blocks/benefits';
-@import './blocks/goods-top';
-@import './blocks/card-product';
-@import './blocks/banner';
-@import './blocks/goods-promo';
-@import './blocks/brands';
-@import './blocks/news';
+@import 'сomponents/header';
+@import 'сomponents/footer';
+@import 'сomponents/card-top';
+@import 'сomponents/card-promo';
+@import 'сomponents/badges-and-available';
 
-@import './blocks/footer';
+@import 'blocks/top-slider';
+@import 'blocks/benefits';
+@import 'blocks/goods-top';
+@import 'blocks/banner';
+@import 'blocks/goods-promo';
+@import 'blocks/brands';
+@import 'blocks/news';

@@ -60,28 +60,12 @@ function images() {
 }
 
 function svgsprite() {
-  return src('app/images/**/*.svg')
+  return src('app/images/icons/**/*.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
           sprite: "../sprite.svg"
-        },
-      },
-      shape: {
-        transform: [{
-          svgo: {
-            plugins: [{
-              name: 'preset-default',
-              params: {
-                overrides: {
-                  removeAttrs: {
-                    attrs: ['class', 'data-name', 'fill', 'stroke']
-                  }
-                }
-              }
-            }]
-          }
-        }]
+        }
       }
     }))
     .pipe(dest('app/images'))
@@ -105,7 +89,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/**/*.svg', '!app/images/sprite.svg'], svgsprite);
+  watch(['app/images/icons/**/*.svg'], svgsprite);
 }
 
 exports.styles = styles;

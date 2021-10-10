@@ -1,11 +1,7 @@
-.brands {
+.brands {  
   padding: 70px 0 0;
 
-  &__list {
-    margin-right: -140px;
-  }
-
-  &__item {
+    &__item {
     opacity: 0.5;
     transition: opacity 0.3s;
 
@@ -14,14 +10,14 @@
     }
   }
 
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__img {
     object-fit: contain;
-    object-position: center;
+    object-position: center center;
   }
-}
-
-.box {
-  overflow: hidden;
-  max-width: 1180px;
-  margin: 0 auto;
 }
