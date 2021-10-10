@@ -36,11 +36,11 @@ body {
   clip: rect(0 0 0 0)
 }
 
-.none {
+.hide {
   display: none;
 }
 
-.logo-img {
+.logo__img {
   object-fit: contain;
   object-position: left;
 }
@@ -124,7 +124,7 @@ body {
     }
 
     &:active {
-      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
       color: rgba($main, 0.5);
     }
   }

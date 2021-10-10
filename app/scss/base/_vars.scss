@@ -57,22 +57,8 @@ $black: #000000;
   }
 }
 
-@mixin line-clamp--1 {
-  -webkit-line-clamp: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@mixin line-clamp--2 {
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@mixin line-clamp--3 {
-  -webkit-line-clamp: 3;
+@mixin line-clamp($line) {
+  -webkit-line-clamp: $line;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;

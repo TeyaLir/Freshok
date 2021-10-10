@@ -6,11 +6,6 @@
   &__top {
     border-bottom: 1px solid rgba($white, 0.1);
     padding: 30px 0;
-
-    &-inner {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 
   &__logo {
@@ -18,49 +13,61 @@
     margin-bottom: 29px;
   }
 
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__form {
+    display: flex;
     margin-right: 72px;
+  }
 
-    &-subtitle {
-      display: block;
-      margin-bottom: 15px;
-    }
+  &__form-subtitle {
+    display: block;
+    margin-bottom: 15px;
+  }
 
-    &-wrap {
-      display: flex;
-    }
+  &__form-input {
+    width: 180px;
+    border-radius: 6px 0 0 6px;
+    padding: 8px 12px 9px 12px;
+    @extend %focus;
 
-    &-input {
-      width: 180px;
-      border-radius: 6px 0 0 6px;
-      padding: 8px 12px 9px 12px;
-      @extend %focus;
-
-      &::placeholder {
-        font-size: 14px;
-        color: $base-lighter;
-      }
-    }
-
-    &-btn {
-      font-weight: 700;
-      font-size: 12px;
-      text-transform: uppercase;
-      border-radius: 0 6px 6px 0;
-      padding: 12px 10px 12px 14px;
+    &::placeholder {
+      font-size: 14px;
+      color: $base-lighter;
     }
   }
 
-  &__list-li {
+  &__form-btn {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 10px 12px 14px;
+  }
+
+  &__list {
     column-count: 3;
     column-gap: 57px;
   }
 
   &__item {
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    transition: opacity 0.3s;
+    padding: 5px 0;
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 
@@ -69,12 +76,14 @@
     margin-bottom: 20px;
   }
 
-  &__link {
-    transition: opacity 0.3s;
+  &__bottom {
+    padding: 20px 0 28px;
+  }
 
-    &:hover {
-      opacity: 0.7;
-    }
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -102,16 +111,6 @@
   }
 }
 
-.footer__bottom {
-  padding: 20px 0 28px;
-
-  &-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
 .payment {
   &__item {
     display: inline-block;
@@ -121,5 +120,9 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__img {
+    object-fit: contain;
   }
 }
