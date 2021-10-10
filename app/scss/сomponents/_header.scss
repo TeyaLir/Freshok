@@ -61,6 +61,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
 }
 
@@ -105,6 +106,9 @@
     transition: background-color 0.3s, border-radius 0.3s;
     padding: 15px 41px 15px 61px;
 
+    // для выпадающего меню
+    z-index: 3;
+
     &::before {
       content: "";
       position: absolute;
@@ -145,7 +149,8 @@
   }
 
   &__list {
-    display: none;
+    transform: translateY(-200%);
+    // display: none;
 
     position: absolute;
     top: 50px;
@@ -155,9 +160,11 @@
     border: 1px solid rgba($bg, 0.3);
     border-radius: 0 0 6px 6px;
     z-index: 2;
+    transition: transform 1s;
 
     &--active {
-      display: block;
+      // display: block;
+      transform: translateY(0);
     }
   }
 
