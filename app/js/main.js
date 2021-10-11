@@ -2,12 +2,15 @@ $(function(){
 
   // Каталог продуктов
   $('.product-catalog__btn').on('click', function () {
+    $('.product-catalog__list').slideToggle("300");
     $('.product-catalog__list').toggleClass('product-catalog__list--active');
     $('.product-catalog__btn').toggleClass('product-catalog__btn--active');
   });
 
-  // top-slider
+  // Слайдер на главной странице
   $('.top-slider__slider').slick({
+    prevArrow:'<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
+    nextArrow:'<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
     // autoplay: true,
     // autoplaySpeed: 5000,
   });

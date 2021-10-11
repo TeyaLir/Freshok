@@ -41,13 +41,13 @@
     }
 
     &--address::before {
-      background-image: url('../../images/icons/car.svg');
-      // background-image: url('../../images/sprite.svg#car');
+      // background-image: url('../images/icons/car.svg');
+      background-image: url('../images/sprite.svg#car');
     }
 
     &--tel::before {
-      background-image: url('../../images/icons/tel.svg');
-      // background-image: url('../../images/sprite.svg#tel');
+      background-image: url('../images/icons/tel.svg');
+      // background-image: url('../images/sprite.svg#tel');
       left: 7px;
     }
   }
@@ -88,7 +88,7 @@
 }
 
 .product-catalog {
-  position: relative;
+  position: relative;  
 
   &__btn {
     position: relative;
@@ -103,11 +103,8 @@
     background-color: $white;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s, border-radius 0.3s;
+    transition: background-color 0.3s, border-radius 0.5s;
     padding: 15px 41px 15px 61px;
-
-    // для выпадающего меню
-    z-index: 3;
 
     &::before {
       content: "";
@@ -117,7 +114,7 @@
       transform: translateY(-50%);
       width: 25px;
       height: 17px;
-      background-image: url('../../images/icons/nav-catalog.png');
+      background-image: url('../images/icons/nav-catalog.png');
       @extend %bg-icon;
     }
 
@@ -129,8 +126,8 @@
       transform: translateY(-50%);
       height: 4px;
       width: 8px;
-      // background-image: url('../../images/icons/arrow-down.svg');
-      background-image: url('../../images/sprite.svg#arrow-down');
+      // background-image: url('../images/icons/arrow-down.svg');
+      background-image: url('../images/sprite.svg#arrow-down');
       @extend %bg-icon;
     }
 
@@ -149,8 +146,7 @@
   }
 
   &__list {
-    transform: translateY(-200%);
-    // display: none;
+    display: none;
 
     position: absolute;
     top: 50px;
@@ -163,8 +159,7 @@
     transition: transform 1s;
 
     &--active {
-      // display: block;
-      transform: translateY(0);
+      display: block;
     }
   }
 
@@ -219,8 +214,8 @@
       transform: translateY(-50%);
       width: 20px;
       height: 20px;
-      background-image: url('../../images/icons/search.svg');
-      // background-image: url('../../images/sprite.svg#search');
+      background-image: url('../images/icons/search.svg');
+      // background-image: url('../images/sprite.svg#search');
       @extend %bg-icon;
     }
   }
@@ -302,18 +297,18 @@
     }
 
     &--user::after {
-      background-image: url('../../images/icons/user.svg');
-      // background-image: url('../../images/sprite.svg#user');
+      background-image: url('../images/icons/user.svg');
+      // background-image: url('../images/sprite.svg#user');
     }
 
     &--heart::after {
-      background-image: url('../../images/icons/heart.svg');
-      // background-image: url('../../images/sprite.svg#heart');
+      background-image: url('../images/icons/heart.svg');
+      // background-image: url('../images/sprite.svg#heart');
     }
 
     &--cart::after {
-      background-image: url('../../images/icons/cart.svg');
-      // background-image: url('../../images/sprite.svg#cart');
+      background-image: url('../images/icons/cart.svg');
+      // background-image: url('../images/sprite.svg#cart');
     }
   }
 

@@ -63,23 +63,21 @@
     border: 1px solid transparent;
     transition: background-color 0.3s, box-shadow 0.3s;
 
-    &::after {
-      content: "";
+    svg {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      @extend %bg-icon;
-      transition: background-image 0.3s;
+      width: 20px;
+      height: 32px;
+      transition: fill 0.3s;
       fill: $base-lighter;
     }
 
     &:hover {
       background-color: $main-lighter;
 
-      &::after {
+      svg {
         fill: $main;
       }
     }
@@ -92,25 +90,9 @@
   .slick-prev {
     left: 3%;
     z-index: 5;
-
-    &::after {
-      background-image: url('../../images/sprite.svg#arrow-left');
-    }
-
-    // &:hover::after {
-      // background-image: url('../../images/icon/arrow-left--green');
-    // }
   }
 
   .slick-next {
     right: 3%;
-
-    &::after {
-      background-image: url('../../images/sprite.svg#arrow-right');
-    }
-
-    // &:hover::after {
-    //   background-image: url('../../images/icon/arrow-right--green');
-    // }
   }
 }

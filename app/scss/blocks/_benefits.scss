@@ -28,18 +28,18 @@
     }
 
     &--delivery::before {
-      background-image: url('../../images/icons/delivery.svg');
-      // background-image: url('../../images/sprite.svg#delivery');
+      background-image: url('../images/icons/delivery.svg');
+      // background-image: url('../images/sprite.svg#delivery');
     }
   
     &--return::before {
-      background-image: url('../../images/icons/return-box.svg');
-      // background-image: url('../../images/sprite.svg#return-box');
+      background-image: url('../images/icons/return-box.svg');
+      // background-image: url('../images/sprite.svg#return-box');
     }
   
     &--hours24::before {
-      background-image: url('../../images/icons/hours24.svg');
-      // background-image: url('../../images/sprite.svg#hours24');
+      background-image: url('../images/icons/hours24.svg');
+      // background-image: url('../images/sprite.svg#hours24');
     }
   }
 

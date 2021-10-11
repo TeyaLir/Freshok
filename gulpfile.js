@@ -65,7 +65,23 @@ function svgsprite() {
       mode: {
         stack: {
           sprite: "../sprite.svg"
-        }
+        },
+      },
+      shape: {
+        transform: [{
+          svgo: {
+            plugins: [{
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeAttrs: {
+                    attrs: ['width', 'height']
+                  }
+                }
+              }
+            }]
+          }
+        }]
       }
     }))
     .pipe(dest('app/images'))
