@@ -77,15 +77,15 @@ body {
     color: $base-lighter;
     cursor: pointer;
     border-bottom: 3px solid transparent;
-    transition: border-bottom 0.3s;
+    transition: border-color 0.3s;
 
     &:hover {
-      border-bottom: 3px solid rgba($main, 0.2);
+      border-color: rgba($main, 0.2);
     }
   }
 
   .mixitup-control-active {
-    border-bottom: 3px solid rgba($main, 0.2);
+    border-color: rgba($main, 0.2);
   }
 }
 
