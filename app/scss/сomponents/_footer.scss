@@ -98,7 +98,7 @@
     display: inline-block;
     height: 32px;
     width: 32px;
-    @extend %bg-icon;
+    @extend %bg-img;
     transition: opacity 0.3s;
 
     &:hover {

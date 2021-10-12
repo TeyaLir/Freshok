@@ -35,9 +35,9 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      height: 40px;
-      width: 40px;
-      @extend %bg-icon;
+      height: 22px;
+      width: 32px;
+      @extend %bg-img;
     }
 
     &--address::before {
@@ -112,7 +112,7 @@
       width: 25px;
       height: 17px;
       background-image: url('../images/icons/nav-catalog.png');
-      @extend %bg-icon;
+      @extend %bg-img;
     }
 
     &::after {
@@ -124,7 +124,7 @@
       height: 4px;
       width: 8px;
       background-image: url('../images/sprite.svg#arrow-down');
-      @extend %bg-icon;
+      @extend %bg-img;
     }
 
     &:hover {
@@ -205,13 +205,13 @@
     &::before {
       content: "";
       position: absolute;
-      left: 5px;
+      left: 14px;
       top: 50%;
       transform: translateY(-50%);
-      width: 35px;
-      height: 35px;
+      width: 20px;
+      height: 20px;
       background-image: url('../images/sprite.svg#search');
-      @extend %bg-icon;
+      @extend %bg-img;
     }
   }
 
@@ -286,9 +286,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 55px;
-      width: 55px;
-      @extend %bg-icon;
+      height: 32px;
+      width: 35px;
+      @extend %bg-img;
     }
 
     &--user::after {

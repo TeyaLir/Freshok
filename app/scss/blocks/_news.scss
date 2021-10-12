@@ -1,11 +1,19 @@
 .news {
   padding: 70px 0;
 
-  &__link {
-    transition: color 0.3s;
+    &__link {
+    color: $main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    border-bottom: 2px solid $main;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
 
     &:hover {
       color: $main-dark;
+      border-bottom: 2px solid $main-dark;
     }
   }
 
@@ -82,6 +90,7 @@
     color: $base;
     @include line-clamp(5);
     transition: color 0.3s;
+    text-transform: initial;
     padding: 18px 18px 0;
   }
 }

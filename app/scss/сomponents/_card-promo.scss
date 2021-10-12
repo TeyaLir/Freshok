@@ -88,17 +88,16 @@
     position: relative;
     font-weight: 700;
     font-size: 14px;
-    padding-right: 24px;
+    padding-right: 19px;
 
     &::after {
       content: "";
       position: absolute;
       right: 0;
-      top: -7px;
-      width: 27px;
-      height: 27px;
+      width: 16px;
+      height: 16px;
       background-image: url('../images/sprite.svg#star');
-      @extend %bg-icon;
+      @extend %bg-img;
     }
   }
 }
