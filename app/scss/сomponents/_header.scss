@@ -35,19 +35,17 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      height: 22px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       @extend %bg-icon;
     }
 
     &--address::before {
-      // background-image: url('../images/icons/car.svg');
       background-image: url('../images/sprite.svg#car');
     }
 
     &--tel::before {
-      background-image: url('../images/icons/tel.svg');
-      // background-image: url('../images/sprite.svg#tel');
+      background-image: url('../images/sprite.svg#tel');
       left: 7px;
     }
   }
@@ -61,7 +59,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 }
 
@@ -126,7 +123,6 @@
       transform: translateY(-50%);
       height: 4px;
       width: 8px;
-      // background-image: url('../images/icons/arrow-down.svg');
       background-image: url('../images/sprite.svg#arrow-down');
       @extend %bg-icon;
     }
@@ -209,13 +205,12 @@
     &::before {
       content: "";
       position: absolute;
-      left: 13px;
+      left: 5px;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      background-image: url('../images/icons/search.svg');
-      // background-image: url('../images/sprite.svg#search');
+      width: 35px;
+      height: 35px;
+      background-image: url('../images/sprite.svg#search');
       @extend %bg-icon;
     }
   }
@@ -291,35 +286,32 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 32px;
-      width: 30px;
+      height: 55px;
+      width: 55px;
       @extend %bg-icon;
     }
 
     &--user::after {
-      background-image: url('../images/icons/user.svg');
-      // background-image: url('../images/sprite.svg#user');
+      background-image: url('../images/sprite.svg#user');
     }
 
     &--heart::after {
-      background-image: url('../images/icons/heart.svg');
-      // background-image: url('../images/sprite.svg#heart');
+      background-image: url('../images/sprite.svg#heart');
     }
 
     &--cart::after {
-      background-image: url('../images/icons/cart.svg');
-      // background-image: url('../images/sprite.svg#cart');
+      background-image: url('../images/sprite.svg#cart');
     }
   }
 
   &__num {
     position: absolute;
     top: 2px;
-    left: 5px;
+    right: 29px;
     min-width: 18px;
     height: 18px;
     background-color: $white;
-    border-radius: 50%;
+    border-radius: 18px;
 
     font-weight: 600;
     font-size: 10px;

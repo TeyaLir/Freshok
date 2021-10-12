@@ -9,9 +9,9 @@
 
   &__item {
     position: relative;
-    width: 264px;
-    padding-left: 75px;
-    margin-right: 65px;
+    width: 280px;
+    padding-left: 90px;
+    margin-right: 55px;
 
     &:last-child {
       margin-right: 0;
@@ -22,24 +22,21 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 50px;
+      width: 90px;
       height: 50px;
       @extend %bg-icon;
     }
 
     &--delivery::before {
-      background-image: url('../images/icons/delivery.svg');
-      // background-image: url('../images/sprite.svg#delivery');
+      background-image: url('../images/sprite.svg#delivery');
     }
   
     &--return::before {
-      background-image: url('../images/icons/return-box.svg');
-      // background-image: url('../images/sprite.svg#return-box');
+      background-image: url('../images/sprite.svg#return-box');
     }
   
     &--hours24::before {
-      background-image: url('../images/icons/hours24.svg');
-      // background-image: url('../images/sprite.svg#hours24');
+      background-image: url('../images/sprite.svg#hours24');
     }
   }
 

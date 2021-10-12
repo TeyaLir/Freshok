@@ -53,27 +53,23 @@
     column-gap: 57px;
   }
 
-  &__item {
-    margin-bottom: 8px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   &__link {
     display: block;
     transition: opacity 0.3s;
-    padding: 5px 0;
+    padding: 10px 0;
 
     &:hover {
       opacity: 0.7;
     }
   }
 
-  &__address {
+  &__contacts-address {
     font-style: normal;
     margin-bottom: 20px;
+  }
+
+  &__address {
+    margin: 10px 0;
   }
 
   &__bottom {
