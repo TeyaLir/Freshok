@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
   // Каталог продуктов
   $('.product-catalog__btn').on('click', function () {
@@ -7,10 +7,15 @@ $(function(){
     $('.product-catalog__btn').toggleClass('product-catalog__btn--active');
   });
 
+  // Корзина
+  $('.user-nav__basket, .basket__close').on('click', function () {
+    $('.basket').toggleClass('basket--active');
+  });
+
   // Слайдер на главной странице
   $('.top-slider__slider').slick({
-    prevArrow:'<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
-    nextArrow:'<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
+    prevArrow: '<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
+    nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
     // autoplay: true,
     // autoplaySpeed: 5000,
   });
@@ -23,19 +28,21 @@ $(function(){
     // autoplay: true
   });
 
+  // Числовое поле - прибавление/убавление количества товара в корзине
+  $('.basket__num').styler();
 
 
   // MixItUp
   var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');
   var containerEl2 = document.querySelector('[data-ref="mixfilter-2"]');
- 
+
   var config = {
     controls: {
       scope: 'local'
     }
   };
- 
+
   var mixer1 = mixitup(containerEl1, config);
   var mixer2 = mixitup(containerEl2, config);
-  
+
 });
