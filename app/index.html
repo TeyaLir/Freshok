@@ -120,12 +120,95 @@
                 </button>
               </li>
               <li class="user-nav__item">
-                <button class="user-nav__link user-nav__link--cart" type="button" href="#!">
+                <button class="user-nav__link user-nav__link--cart user-nav__basket" type="button" href="#!">
                   <span class="user-nav__num">12</span>
                   <span class="sr-only">открыть корзину с товарами</span>
                 </button>
               </li>
             </ul>
+
+            <div class="basket">
+              <div class="basket__wrap">
+                <div class="basket__heading">
+                  <div class="basket__heading-info">
+                    <h1 class="basket__title">Корзина</h1>
+                    <button class="basket__reset" type="reset">
+                      очистить корзину
+                    </button>
+                  </div>
+
+                  <button class="basket__close" type="button"></button>
+                </div>
+
+                <ul class="basket__list">
+                  <li class="basket__item">
+                    <img class="basket__img" src="images/cards/pineapple.jpg" alt="фото ананаса">
+
+                    <div class="basket__content">
+                      <div class="basket__desc">
+                        Ананас, 1 кг
+                      </div>
+                      <div class="basket__price">
+                        999<span>&#8381;</span>
+                      </div>
+                    </div>
+
+                    <div class="basket__result">
+                      <button class="basket__remove" type="reset"></button>
+
+                      <form class="basket__form" name="basket__form" action="#!">
+                        <label class="basket__label">
+                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                        </label>
+                        <div class="basket__sum">
+                          1998<span>&#8381;</span>
+                        </div>
+                      </form>
+                    </div>
+                  </li>
+
+                  <li class="basket__item">
+                    <img class="basket__img" src="images/cards/pitahaya.jpg" alt="фото питахайи">
+
+                    <div class="basket__content">
+                      <div class="basket__desc">
+                        Питахайя красная с белой мякотью, 1шт
+                      </div>
+                      <div class="basket__price">
+                        1019<span>&#8381;</span>
+                      </div>
+                    </div>
+
+                    <div class="basket__result">
+                      <button class="basket__remove" type="reset"></button>
+
+                      <form class="basket__form" name="basket__form" action="#!">
+                        <label class="basket__label">
+                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                        </label>
+                        <div class="basket__sum">
+                          2038<span>&#8381;</span>
+                        </div>
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="basket__coutn">
+                  <div class="basket__count-subtitle">
+                    Товаров на сумму
+                  </div>
+                  <div class="basket__count-sum">
+                    2038<span>&#8381;</span>
+                  </div>
+                </div>
+
+                <button class="basket__checkout btn" type="submit">
+                  Оформить заказ
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -965,7 +1048,7 @@
                   <span class="news__month">февраль</span>
                   <span class="news__number">20</span>
                 </time>
-                
+
                 <img class="news__img" src="images/news/03.jpg" height="240" alt="фото папайи">
 
                 <h3 class="news__text">
