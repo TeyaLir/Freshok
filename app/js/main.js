@@ -29,6 +29,20 @@ $(function () {
     nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
     // autoplay: true,
     // autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1550,
+        settings: {
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        // breakpoint: 480,
+        // settings: {
+        // }
+      }
+    ]
   });
 
   // Слайдер брендов
