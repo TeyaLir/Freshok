@@ -101,3 +101,19 @@ $xs: 480px;
     @content;
   }
 }
+
+// @include max-w($xl) {
+//   display: none;
+// }
+// @include max-w($lg) {
+//   display: none;
+// }
+// @include max-w($md) {
+//   display: none;
+// }
+// @include max-w($sm) {
+//   display: none;
+// }
+// @include max-w($xs) {
+//   display: none;
+// }

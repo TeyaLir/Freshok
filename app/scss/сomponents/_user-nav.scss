@@ -1,0 +1,111 @@
+.user-nav {
+  display: flex;
+
+  &__item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 11px;
+
+    @include max-w($xs) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--search {
+      display: none;
+
+      @include max-w($lg) {
+        display: inline-block;
+      }
+    }
+
+    &--user,
+    &--heart {
+      @include max-w($md) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    border: 0;
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.5s;
+
+    &:hover,
+    &:active {
+      background-color: rgba(transparent, 0.1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 34px;
+      width: 38px;
+      @extend %bg-img;
+    }
+
+    &--search::after {
+      background-image: url('../images/sprite.svg#search--white');
+
+      @include max-w($xs) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--user::after {
+      background-image: url('../images/sprite.svg#user');
+    }
+
+    &--heart::after {
+      background-image: url('../images/sprite.svg#heart');
+    }
+
+    &--cart::after {
+      background-image: url('../images/sprite.svg#cart');
+
+      @include max-w($xs) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 2px;
+    right: 29px;
+    min-width: 18px;
+    height: 18px;
+    background-color: $white;
+    border-radius: 18px;
+
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    color: $accent-first;
+    text-align: center;
+    z-index: 1;
+    padding: 0 4px;
+
+    @include max-w($xs) {
+      top: 5px;
+      right: 27px;
+    }
+  }
+}

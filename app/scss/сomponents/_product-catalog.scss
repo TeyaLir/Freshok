@@ -1,0 +1,108 @@
+.product-catalog {
+  position: relative;
+  margin-right: 20px;
+
+  @include max-w($lg) {
+    margin-right: auto;
+  }
+  @include max-w($md) {
+    display: none;
+  }
+
+  &__btn {
+    position: relative;
+    border: 0;
+
+    width: 236px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $main;
+
+    height: 50px;
+    background-color: $white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.5s;
+    padding: 15px 41px 15px 61px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 17px;
+      background-image: url('../images/icons/nav-catalog.png');
+      @extend %bg-img;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 8px;
+      background-image: url('../images/sprite.svg#arrow-down');
+      @extend %bg-img;
+    }
+
+    &:hover {
+      background-color: $main-lighter;
+    }
+
+    &--active {
+      border-radius: 6px 6px 0 0;
+      background-color: $main-lighter;
+
+      &::after {
+        transform: rotate(180deg) translateY(40%);
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+
+    position: absolute;
+    top: 50px;
+    width: 100%;
+
+    background-color: $white;
+    border: 1px solid rgba($bg, 0.3);
+    border-radius: 0 0 6px 6px;
+    z-index: 2;
+    transition: transform 1s;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid rgba($bg, 0.3);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $base;
+    border-left: 3px solid transparent;
+    transition: color 0.3s, border 0.3s;
+
+    &:hover {
+      color: $main;
+      border-left: 3px solid $main;
+    }
+  }
+
+}

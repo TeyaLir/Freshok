@@ -49,11 +49,38 @@
         </div>
       </div>
 
+      <div class="header__top-mobile">
+        <div class="container">
+          <div class="header__top-inner">
+
+            <button class="burger" type="button">
+              <svg class="burger__img">
+                <use xlink:href="images/sprite.svg#burger"></use>
+              </svg>
+              <span class="sr-only">открыть меню</span>
+            </button>
+
+            <div class="header__top-connect">
+              <a class="header__top-link header__top-link--address" href="#!">
+                <span class="sr-only">открыть адрес и время доставки</span>
+              </a>
+              <a class="header__top-link header__top-link--tel" href="tel:+7907288365">
+                <span class="sr-only">позвонить в магазин по горячей линии 24/7</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="header__bottom">
         <div class="container">
           <div class="header__bottom-inner">
             <a class="logo" href="#!">
               <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="логотип ФрешОк">
+            </a>
+
+            <a class="logo-mobile" href="#!">
+              <img class="logo-mobile__img" src="images/logo-mobile.svg" width="37" height="40" alt="логотип ФрешОк">
             </a>
 
             <div class="product-catalog">
@@ -108,17 +135,25 @@
             </form>
 
             <ul class="user-nav">
-              <li class="user-nav__item">
-                <button class="user-nav__link user-nav__link--user" type="button" href="#!">
-                  <span class="sr-only">открыть личный кабинет</span>
+              <li class="user-nav__item user-nav__item--search">
+                <button class="user-nav__link user-nav__link--search" type="button" href="#!">
+                  <span class="sr-only">поиск по магазину</span>
                 </button>
               </li>
-              <li class="user-nav__item">
+
+              <li class="user-nav__item user-nav__item--user">
+                <button class="user-nav__link user-nav__link--user" type="button" href="#!">
+                  <span class="sr-only">вход | регистрация</span>
+                </button>
+              </li>
+
+              <li class="user-nav__item user-nav__item--heart">
                 <button class="user-nav__link user-nav__link--heart" type="button" href="#!">
                   <span class="user-nav__num">12</span>
                   <span class="sr-only">открыть избранные товары</span>
                 </button>
               </li>
+
               <li class="user-nav__item">
                 <button class="user-nav__link user-nav__link--cart user-nav__basket" type="button" href="#!">
                   <span class="user-nav__num">12</span>
@@ -127,92 +162,249 @@
               </li>
             </ul>
 
-            <div class="basket">
-              <div class="basket__wrap">
-                <div class="basket__heading">
-                  <div class="basket__heading-info">
-                    <h1 class="basket__title">Корзина</h1>
-                    <button class="basket__reset" type="reset">
-                      очистить корзину
-                    </button>
-                  </div>
-
-                  <button class="basket__close" type="button"></button>
-                </div>
-
-                <ul class="basket__list">
-                  <li class="basket__item">
-                    <img class="basket__img" src="images/cards/pineapple.jpg" alt="фото ананаса">
-
-                    <div class="basket__content">
-                      <div class="basket__desc">
-                        Ананас, 1 кг
-                      </div>
-                      <div class="basket__price">
-                        999<span>&#8381;</span>
-                      </div>
-                    </div>
-
-                    <div class="basket__result">
-                      <button class="basket__remove" type="reset"></button>
-
-                      <form class="basket__form" name="basket__form" action="#!">
-                        <label class="basket__label">
-                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
-                        </label>
-                        <div class="basket__sum">
-                          1998<span>&#8381;</span>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-
-                  <li class="basket__item">
-                    <img class="basket__img" src="images/cards/pitahaya.jpg" alt="фото питахайи">
-
-                    <div class="basket__content">
-                      <div class="basket__desc">
-                        Питахайя красная с белой мякотью, 1шт
-                      </div>
-                      <div class="basket__price">
-                        1019<span>&#8381;</span>
-                      </div>
-                    </div>
-
-                    <div class="basket__result">
-                      <button class="basket__remove" type="reset"></button>
-
-                      <form class="basket__form" name="basket__form" action="#!">
-                        <label class="basket__label">
-                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
-                        </label>
-                        <div class="basket__sum">
-                          2038<span>&#8381;</span>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-                </ul>
-
-                <div class="basket__coutn">
-                  <div class="basket__count-subtitle">
-                    Товаров на сумму
-                  </div>
-                  <div class="basket__count-sum">
-                    2038<span>&#8381;</span>
-                  </div>
-                </div>
-
-                <button class="basket__checkout btn" type="submit">
-                  Оформить заказ
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </nav>
+
+    <div class="menu-mobile__overlay">
+      <div class="menu-mobile">
+        <div class="menu-mobile__top">
+          <a class="logo-burger" href="!#">
+            <img src="images/logo-green.svg" width="200" height="60" alt="логотип ФрешОк">
+          </a>
+
+          <button class="menu-mobile__close" type="button"></button>
+        </div>
+
+        <button class="menu-mobile__log-reg" type="button">
+          Вход | Регистрация
+        </button>
+
+        <div class="menu-mobile__content">
+
+          <div class="product-catalog">
+            <button class="product-catalog__btn" type="button">Каталог товаров</button>
+            <ul class="product-catalog__list">
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Овощи и фрукты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Бакалея</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Молочные продукты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Хлеб</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Мясо</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Колбаса</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Рыба</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Алкоголь</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Напитки</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Торты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Мясо</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Чай, кофе</a>
+              </li>
+            </ul>
+          </div>
+  
+          <address class="menu-mobile__contacts">
+            <ul class="menu-mobile__contacts-items">
+              <li class="menu-mobile__contacts-item">
+                <a class="header__top-link header__top-link--tel" href="tel:+7907288365">
+                  +7 907 288 365
+                </a>
+              </li>
+              <li class="menu-mobile__contacts-item menu-mobile__contacts--address">
+                Санкт-Петербург, ул. Ленина, 1
+              </li>
+            </ul>  
+          </address>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#facebook-black');">
+                <span class="sr-only">перейти в фейсбук</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#youtube-black');">
+                <span class="sr-only">перейти на ютуб</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#telegram-black');">
+                <span class="sr-only">перейти в телеграм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#instagram-black');">
+                <span class="sr-only">перейти в инстаграм</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Доставка
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                О нас
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Новости
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Контакты
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Акции
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Вакансии
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Отзывы
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Публичная оферта
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <form class="search-mobile" name="form-search">
+      <label class="search__label" for="form-search__input--mobile">
+        <span class="sr-only">Поле для поиска товара в нашем магазине</span>
+      </label>
+      <input class="search__input" id="form-search__input--mobile" name="shop-search" type="search"
+        placeholder="Я ищу ..." required>
+      <button class="search__btn btn btn--dark" type="submit">Поиск</button>
+    </form>
+
+    <div class="basket__overlay">
+      <div class="basket">
+        <div class="basket__heading">
+          <div class="basket__heading-info">
+            <h1 class="basket__title">Корзина</h1>
+            <button class="basket__reset" type="reset">
+              очистить корзину
+            </button>
+          </div>
+
+          <button class="basket__close" type="button"></button>
+        </div>
+
+        <ul class="basket__list">
+          <li class="basket__item">
+            <div class="basket__content">
+              <img class="basket__img" src="images/cards/pineapple.jpg" alt="фото ананаса">
+  
+              <div class="basket__text">
+                <div class="basket__desc">
+                  Ананас, 1 кг
+                </div>
+                <div class="basket__price">
+                  999<span>&#8381;</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="basket__result">
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="2" min="1">
+                </label>
+                <div class="basket__sum">
+                  1998<span>&#8381;</span>
+                </div>
+              </form>
+            </div>
+
+            <button class="basket__remove" type="reset"></button>
+          </li>
+
+          <li class="basket__item">
+            <div class="basket__content">
+              <img class="basket__img" src="images/cards/pitahaya.jpg" alt="фото питахайи">
+  
+              <div class="basket__text">
+                <div class="basket__desc">
+                  Питахайя красная с белой мякотью, 1шт
+                </div>
+                <div class="basket__price">
+                  1019<span>&#8381;</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="basket__result">              
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="2" min="1">
+                </label>
+                <div class="basket__sum">
+                  2038<span>&#8381;</span>
+                </div>
+              </form>
+            </div>
+            
+            <button class="basket__remove" type="reset"></button>
+          </li>
+        </ul>
+
+        <div class="basket__coutn">
+          <div class="basket__count-subtitle">
+            Товаров на сумму
+          </div>
+          <div class="basket__count-sum">
+            4036<span>&#8381;</span>
+          </div>
+        </div>
+
+        <button class="basket__checkout btn" type="submit">
+          Оформить заказ
+        </button>
+      </div>
+    </div>
   </header>
 
   <main class="main">
@@ -274,7 +466,7 @@
       </ul>
     </section>
 
-    <div class="benefits">
+    <div class="benefits hide">
       <div class="container">
         <ul class="benefits__inner">
           <li class="benefits__item benefits__item--delivery">
@@ -299,7 +491,7 @@
       </div>
     </div>
 
-    <section class="goods-top" data-ref="mixfilter-1">
+    <section class="goods-top hide" data-ref="mixfilter-1">
       <div class="container">
         <h2 class="title">Топовые товары</h2>
 
@@ -617,7 +809,7 @@
       </div>
     </section>
 
-    <div class="banner">
+    <div class="banner hide">
       <div class="container">
         <ul class="banner__list">
           <li class="banner__item banner__item--big banner__item--light"
@@ -640,7 +832,7 @@
       </div>
     </div>
 
-    <section class="goods-promo" data-ref="mixfilter-2">
+    <section class="goods-promo hide" data-ref="mixfilter-2">
       <div class="container">
         <h2 class="title">Акции</h2>
 
@@ -931,7 +1123,7 @@
       </div>
     </section>
 
-    <div class="brands">
+    <div class="brands hide">
       <div class="container">
         <ul class="brands__list">
           <li class="brands__item">
@@ -998,7 +1190,7 @@
       </div>
     </div>
 
-    <section class="news">
+    <section class="news hide">
       <div class="container">
         <div class="news__heading">
           <h2 class="title news__title">Наши новости</h2>
@@ -1062,7 +1254,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer hide">
     <div class="footer__top">
       <div class="container">
         <a class="logo footer__logo" href="#!">

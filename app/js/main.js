@@ -9,7 +9,18 @@ $(function () {
 
   // Корзина
   $('.user-nav__basket, .basket__close').on('click', function () {
-    $('.basket').toggleClass('basket--active');
+    $('.basket__overlay').toggleClass('basket__overlay--active');
+  });
+
+  // Поиск на мобильных
+  $('.user-nav__item--search').on('click', function () {
+    $('.search-mobile').toggleClass('search-mobile--active');
+  });
+
+  // Меню бургер
+  $('.burger, .menu-mobile__close').on('click', function () {
+    $('.menu-mobile').toggleClass('menu-mobile--active');
+    $('.menu-mobile__overlay').toggleClass('menu-mobile__overlay--active');
   });
 
   // Слайдер на главной странице

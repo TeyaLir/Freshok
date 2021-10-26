@@ -1,0 +1,22 @@
+.search-mobile {
+  display: none;
+
+  &--active {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .search__input {
+    max-width: 100%;
+    border: 1px solid #31352B;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .search__btn {
+    border-radius: 0;
+  }
+}
