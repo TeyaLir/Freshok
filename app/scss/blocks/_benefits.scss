@@ -2,9 +2,23 @@
   background-color: $bg-light;
   padding: 45px 0 30px;
 
+  @include max-w($xs) {
+    padding: 27px 0 39px;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
+
+    @include max-w($md) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include max-w($sm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -27,14 +41,33 @@
       @extend %bg-img;
     }
 
+    @include max-w($md) {
+      width: 40%;
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include max-w($sm) {
+      width: 50%;
+    }
+
+    @include max-w($xs) {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
     &--delivery::before {
       background-image: url('../images/sprite.svg#delivery');
     }
-  
+
     &--return::before {
       background-image: url('../images/sprite.svg#return-box');
     }
-  
+
     &--hours24::before {
       background-image: url('../images/sprite.svg#hours24');
     }

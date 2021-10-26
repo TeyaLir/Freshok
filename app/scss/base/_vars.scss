@@ -78,20 +78,19 @@ $md: 992px;
 $sm: 768px;
 $xs: 480px;
 
-// @include max-w($xl) {
-//   display: none;
+// @include max-w($xl) {   
 // }
-// @include max-w($lg) {
-//   display: none;
+
+// @include max-w($lg) {   
 // }
-// @include max-w($md) {
-//   display: none;
+
+// @include max-w($md) {   
 // }
-// @include max-w($sm) {
-//   display: none;
+
+// @include max-w($sm) {   
 // }
-// @include max-w($xs) {
-//   display: none;
+
+// @include max-w($xs) {   
 // }
 
 @mixin max-w($width) {

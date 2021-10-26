@@ -36,11 +36,6 @@ $(function () {
           arrows: false,
           dots: true,
         }
-      },
-      {
-        // breakpoint: 480,
-        // settings: {
-        // }
       }
     ]
   });
