@@ -41,6 +41,10 @@
       margin-bottom: 30px;
       margin-right: 0;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       &:nth-child(2) {
         margin-right: 30px;
       }
