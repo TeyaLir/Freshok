@@ -79,23 +79,17 @@ $sm: 768px;
 $xs: 480px;
 $xxs: 360px;
 
-// @include max-w($xl) {   
-// }
+// @include max-w($xl) {}
 
-// @include max-w($lg) {   
-// }
+// @include max-w($lg) {}
 
-// @include max-w($md) {   
-// }
+// @include max-w($md) {}
 
-// @include max-w($sm) {   
-// }
+// @include max-w($sm) {}
 
-// @include max-w($xs) {   
-// }
+// @include max-w($xs) {}
 
-// @include max-w($xxs) {   
-// }
+// @include max-w($xxs) {}
 
 @mixin max-w($width) {
   @media (max-width: $width) {
