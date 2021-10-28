@@ -2,10 +2,33 @@
   text-align: center;
   padding: 75px 0 0;
 
+  @include max-w($xs) {
+    padding-top: 47px;
+  }
+
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(4, minmax(170px, 300px));
     grid-gap: 30px;
+    justify-content: center;
     margin-bottom: 50px;
+
+    @include max-w($lg) {
+      grid-template-columns: repeat(3, minmax(170px, 300px));
+    }
+
+    @include max-w($md) {
+      grid-template-columns: repeat(2, minmax(170px, 300px));
+    }
+
+    @include max-w($xs) {
+      grid-gap: 5px;
+      margin-bottom: 25px;
+    }
+
+    @include max-w($xxs) {
+      grid-template-columns: repeat(1, 210px);
+      grid-gap: 10px;
+    }
   }
 }

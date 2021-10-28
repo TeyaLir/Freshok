@@ -182,16 +182,12 @@
   &__result {
     display: flex;
     align-items: flex-end;
-  }
-
-  &__form {
-    width: 155px;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 155px;
 
     @include max-w($md) {
       width: 100%;
+      justify-content: space-between;
     }
   }
 

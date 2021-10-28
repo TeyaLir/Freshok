@@ -1,6 +1,7 @@
 .card-top {
   position: relative;
   min-height: 410px;
+  height: 100%;
   background-color: $white;
   border: 1px solid rgba($base, 0.2);
   border-radius: 6px;
@@ -12,6 +13,10 @@
 
   &:hover {
     border-color: $main;
+  }
+
+  @include max-w($xs) {
+    min-height: 304px;
   }
 
   &__top {
@@ -39,8 +44,13 @@
     fill: $bg;
     transition: fill 0.3s;
 
-    &:hover  {
+    &:hover {
       fill: $accent-third;
+    }
+
+    @include max-w($xs) {
+      width: 24px;
+      height: 21px;
     }
   }
 
@@ -54,6 +64,10 @@
     height: 215px;
     margin-bottom: 18px;
     transition: display 0.5s;
+
+    @include max-w($xs) {
+      height: 120px;
+    }
 
     &::before {
       content: "";
@@ -98,6 +112,10 @@
     object-position: center;
     padding: 0 18px;
     margin: 0 auto;
+
+    @include max-w($xs) {
+      object-position: top;
+    }
   }
 
   &__title {
@@ -107,6 +125,19 @@
     text-align: left;
     @include line-clamp(3);
     padding: 0 17px;
+
+    @include max-w($xs) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .basket__form {
+    display: none;
+
+    @include max-w($xs) {
+      display: block;
+      margin-bottom: 12px;
+    }
   }
 
   &__bottom {
@@ -165,4 +196,3 @@
     }
   }
 }
-
