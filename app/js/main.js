@@ -1,5 +1,13 @@
 $(function () {
 
+  // Плавынй скролл
+  $(".header__nav a, .logo, .menu-mobile a, .footer a").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
+  });
+
   // Каталог продуктов
   $('.product-catalog__btn').on('click', function () {
     $('.product-catalog__list').slideToggle("300");
@@ -27,8 +35,8 @@ $(function () {
   $('.top-slider__slider').slick({
     prevArrow: '<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
     nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1550,
@@ -44,8 +52,8 @@ $(function () {
   $('.brands__list').slick({
     arrows: false,
     slidesToShow: 6,
-    slidesToScroll: 3,
-    // autoplay: true,
+    slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
