@@ -3,11 +3,48 @@
   background-color: $bg-light;
   padding: 75px 0;
 
+  @include max-w($xs) {
+    padding: 50px 0;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 300px);
     grid-gap: 30px;
+    justify-content: center;
     margin-bottom: 48px;
+
+    @include max-w($xl) {
+      grid-template-columns: repeat(3, 300px);
+    }
+
+    @include max-w($md) {
+      grid-template-columns: repeat(2, 300px);
+    }
+
+    @include max-w($sm) {
+      grid-gap: 15px;
+    }
+
+    @include max-w($ssm) {
+      grid-template-columns: repeat(1, 300px);
+      margin-bottom: 25px;
+    }
+  }
+
+  &__filter {
+
+    @include max-w($xs) {
+      width: 300px;
+      justify-content: space-between;
+      margin: 0 auto 15px;
+
+      .filter__item {
+        display: inline-block;
+        min-width: auto;
+        margin-right: 10px;
+      }
+    }
   }
 
   .filter__btn {

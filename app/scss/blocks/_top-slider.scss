@@ -1,14 +1,33 @@
 .top-slider {
   background-color: $bg-light;
 
-  &__item {
+  &__box {
     @extend %bg-img;
+  }
+
+  .container {
+    @include max-w($xs) {
+      padding: 0;
+    }
   }
 
   &__wrap {
     position: relative;
     height: 600px;
     width: 100%;
+
+    @include max-w($lg) {
+      height: 500px;
+    }
+    @include max-w($md) {
+      height: 400px;
+    }
+    @include max-w($sm) {
+      
+    }
+    @include max-w($xs) {
+      height: 320px;
+    }
   }
 
   &__inner {
@@ -19,6 +38,10 @@
     background-color: rgba($white, 0.8);
     border-radius: 6px;
     padding: 24px 24px 35px;
+    @include max-w($xs) {
+      border-radius: 0%;
+      padding: 16px 12px 15px 12px;
+    }
   }
 
   &__title {
@@ -31,6 +54,21 @@
     text-transform: uppercase;
     color: $base-lighter;
     @include line-clamp(3);
+
+    @include max-w($lg) {
+      font-size: 50px;
+    }
+    @include max-w($md) {
+      font-size: 40px;
+    }
+    @include max-w($sm) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    @include max-w($xs) {
+      font-size: 20px;
+      font-weight: 700;
+    }
   }
 
   &__subtitle {
@@ -43,6 +81,16 @@
     max-width: 780px;
     margin-bottom: 25px;
     @include line-clamp(3);
+  }
+
+  &__btn {
+    @include max-w($sm) {
+      font-size: 16px;
+    }
+    @include max-w($xs) {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
   }
 
   .slick-prev,
@@ -94,5 +142,38 @@
 
   .slick-next {
     right: 3%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      padding: 0;
+      font-size: 0;
+
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: $white;
+      border: 1px solid $bg;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+  }
+
+  .slick-active button {
+    background-color: $main;
+    border-color: $main;
   }
 }

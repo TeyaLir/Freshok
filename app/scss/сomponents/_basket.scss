@@ -1,23 +1,33 @@
 .basket {
-  display: none;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 940px;
-  background-color: rgba($black, 0.15);
-  z-index: 9;
+  right: 0;
+  width: 475px;
+  z-index: 10;
 
-  &--active {
-    display: block;
+  @include max-w($md) {
+    position: relative;
+    width: 100%;
   }
 
-  &__wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 475px;
-    z-index: 10;
+  &__overlay {
+    display: none;
+
+    &--active {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 940px;
+      background-color: rgba($black, 0.15);
+      z-index: 9;
+
+      @include max-w($md) {
+        position: relative;
+        min-height: 0;
+      }
+    }
   }
 
   &__heading {
@@ -26,7 +36,11 @@
     align-items: center;
     background-color: $white;
     border: 1px solid rgba($bg, 0.3);
-    padding: 19px 26px 12px 24px;
+    padding: 19px 17px 10px 24px;
+
+    @include max-w($xs) {
+      padding: 21px 14px 11px 15px;
+    }
   }
 
   &__title {
@@ -34,7 +48,12 @@
     font-size: 24px;
     line-height: 1.2;
     color: $black;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+
+    @include max-w($xs) {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
   }
 
   &__reset {
@@ -75,6 +94,11 @@
       width: 24px;
       background-image: url('../images/sprite.svg#close-btn');
       @extend %bg-img;
+
+      @include max-w($xs) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 
@@ -82,9 +106,16 @@
     min-height: 705px;
     background-color: $bg-light;
     padding: 12px;
+
+    @include max-w($md) {
+      position: relative;
+      min-height: 0;
+      height: auto;
+    }
   }
 
   &__item {
+    position: relative;
     display: flex;
     border-radius: 3px;
     border: 1px solid $bg;
@@ -100,6 +131,18 @@
     &:hover {
       border-color: $main;
     }
+
+    @include max-w($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @include max-w($md) {
+      margin-bottom: 18px;
+    }
   }
 
   &__img {
@@ -110,7 +153,7 @@
     margin-right: 32px;
   }
 
-  &__content {
+  &__text {
     width: 170px;
     margin: auto 12px auto 0;
   }
@@ -132,47 +175,20 @@
 
     & span {
       font-size: 14px;
+      margin-left: 1px;
     }
   }
 
   &__result {
-    width: 155px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end;
-  }
-
-  &__remove {
-    border: none;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border-radius: 3px;
-    transition: background-color 0.5s;
-
-    &:hover {
-      background: rgba($bg, 0.3);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 12px;
-      width: 12px;
-      background-image: url('../images/sprite.svg#remove-btn');
-      @extend %bg-img;
-    }
-  }
-
-  &__form {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 155px;
+
+    @include max-w($md) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__num {
@@ -231,10 +247,12 @@
 
       &.minus {
         left: 0;
+        border-radius: 3px 0 0 3px;
       }
 
       &.plus {
         right: 0;
+        border-radius: 0 3px 3px 0;
 
         &::before {
           content: "";
@@ -259,6 +277,35 @@
 
     & span {
       font-size: 14px;
+      margin-left: 1px;
+    }
+  }
+
+  &__remove {
+    border: none;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background: rgba($bg, 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 12px;
+      width: 12px;
+      background-image: url('../images/sprite.svg#remove-btn');
+      @extend %bg-img;
     }
   }
 
@@ -269,17 +316,38 @@
     background-color: $white;
     font-size: 24px;
     padding: 24px;
+
+    @include max-w($xs) {
+      padding: 20px;
+    }
   }
 
   &__count-subtitle {
     line-height: 1.2;
     color: $black;
+
+    @include max-w($xs) {
+      font-size: 14px;
+    }
   }
 
   &__count-sum {
     font-weight: 600;
     line-height: 1;
     color: $base-lighter;
+
+    @include max-w($xs) {
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 18px;
+      margin-left: 1px;
+
+      @include max-w($xs) {
+        font-size: 14px;
+      }
+    }
   }
 
   &__checkout {
@@ -292,5 +360,9 @@
     font-size: 18px;
     color: $white;
     padding: 22px;
+
+    @include max-w($xs) {
+      padding: 12px;
+    }
   }
 }

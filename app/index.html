@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="home">
 
   <header class="header">
     <nav class="header__nav">
@@ -40,7 +40,7 @@
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#!">
+                <a class="menu__link" href="#news">
                   Новости
                 </a>
               </li>
@@ -49,11 +49,38 @@
         </div>
       </div>
 
+      <div class="header__top-mobile">
+        <div class="container">
+          <div class="header__top-inner">
+
+            <button class="burger" type="button">
+              <svg class="burger__img">
+                <use xlink:href="images/sprite.svg#burger"></use>
+              </svg>
+              <span class="sr-only">открыть меню</span>
+            </button>
+
+            <div class="header__top-connect">
+              <a class="header__top-link header__top-link--address" href="#!">
+                <span class="sr-only">открыть адрес и время доставки</span>
+              </a>
+              <a class="header__top-link header__top-link--tel" href="tel:+7907288365">
+                <span class="sr-only">позвонить в магазин по горячей линии 24/7</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="header__bottom">
         <div class="container">
           <div class="header__bottom-inner">
-            <a class="logo" href="#!">
+            <a class="logo" href="#home">
               <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="логотип ФрешОк">
+            </a>
+
+            <a class="logo-mobile" href="#home">
+              <img class="logo-mobile__img" src="images/logo-mobile.svg" width="37" height="40" alt="логотип ФрешОк">
             </a>
 
             <div class="product-catalog">
@@ -108,17 +135,25 @@
             </form>
 
             <ul class="user-nav">
-              <li class="user-nav__item">
-                <button class="user-nav__link user-nav__link--user" type="button" href="#!">
-                  <span class="sr-only">открыть личный кабинет</span>
+              <li class="user-nav__item user-nav__item--search">
+                <button class="user-nav__link user-nav__link--search" type="button" href="#!">
+                  <span class="sr-only">поиск по магазину</span>
                 </button>
               </li>
-              <li class="user-nav__item">
+
+              <li class="user-nav__item user-nav__item--user">
+                <button class="user-nav__link user-nav__link--user" type="button" href="#!">
+                  <span class="sr-only">вход | регистрация</span>
+                </button>
+              </li>
+
+              <li class="user-nav__item user-nav__item--heart">
                 <button class="user-nav__link user-nav__link--heart" type="button" href="#!">
                   <span class="user-nav__num">12</span>
                   <span class="sr-only">открыть избранные товары</span>
                 </button>
               </li>
+
               <li class="user-nav__item">
                 <button class="user-nav__link user-nav__link--cart user-nav__basket" type="button" href="#!">
                   <span class="user-nav__num">12</span>
@@ -127,92 +162,249 @@
               </li>
             </ul>
 
-            <div class="basket">
-              <div class="basket__wrap">
-                <div class="basket__heading">
-                  <div class="basket__heading-info">
-                    <h1 class="basket__title">Корзина</h1>
-                    <button class="basket__reset" type="reset">
-                      очистить корзину
-                    </button>
-                  </div>
-
-                  <button class="basket__close" type="button"></button>
-                </div>
-
-                <ul class="basket__list">
-                  <li class="basket__item">
-                    <img class="basket__img" src="images/cards/pineapple.jpg" alt="фото ананаса">
-
-                    <div class="basket__content">
-                      <div class="basket__desc">
-                        Ананас, 1 кг
-                      </div>
-                      <div class="basket__price">
-                        999<span>&#8381;</span>
-                      </div>
-                    </div>
-
-                    <div class="basket__result">
-                      <button class="basket__remove" type="reset"></button>
-
-                      <form class="basket__form" name="basket__form" action="#!">
-                        <label class="basket__label">
-                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
-                        </label>
-                        <div class="basket__sum">
-                          1998<span>&#8381;</span>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-
-                  <li class="basket__item">
-                    <img class="basket__img" src="images/cards/pitahaya.jpg" alt="фото питахайи">
-
-                    <div class="basket__content">
-                      <div class="basket__desc">
-                        Питахайя красная с белой мякотью, 1шт
-                      </div>
-                      <div class="basket__price">
-                        1019<span>&#8381;</span>
-                      </div>
-                    </div>
-
-                    <div class="basket__result">
-                      <button class="basket__remove" type="reset"></button>
-
-                      <form class="basket__form" name="basket__form" action="#!">
-                        <label class="basket__label">
-                          <input class="basket__num" name="basket__num" type="number" value="1" min="1">
-                        </label>
-                        <div class="basket__sum">
-                          2038<span>&#8381;</span>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-                </ul>
-
-                <div class="basket__coutn">
-                  <div class="basket__count-subtitle">
-                    Товаров на сумму
-                  </div>
-                  <div class="basket__count-sum">
-                    2038<span>&#8381;</span>
-                  </div>
-                </div>
-
-                <button class="basket__checkout btn" type="submit">
-                  Оформить заказ
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </nav>
+
+    <div class="menu-mobile__overlay">
+      <div class="menu-mobile">
+        <div class="menu-mobile__top">
+          <a class="logo-burger" href="#home">
+            <img src="images/logo-green.svg" width="200" height="60" alt="логотип ФрешОк">
+          </a>
+
+          <button class="menu-mobile__close" type="button"></button>
+        </div>
+
+        <button class="menu-mobile__log-reg" type="button">
+          Вход | Регистрация
+        </button>
+
+        <div class="menu-mobile__content">
+
+          <div class="product-catalog">
+            <button class="product-catalog__btn" type="button">Каталог товаров</button>
+            <ul class="product-catalog__list">
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Овощи и фрукты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Бакалея</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Молочные продукты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Хлеб</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Мясо</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Колбаса</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Рыба</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Алкоголь</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Напитки</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Торты</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Мясо</a>
+              </li>
+              <li class="product-catalog__item">
+                <a class="product-catalog__link" href="#!">Чай, кофе</a>
+              </li>
+            </ul>
+          </div>
+
+          <address class="menu-mobile__contacts">
+            <ul class="menu-mobile__contacts-items">
+              <li class="menu-mobile__contacts-item">
+                <a class="header__top-link header__top-link--tel" href="tel:+7907288365">
+                  +7 907 288 365
+                </a>
+              </li>
+              <li class="menu-mobile__contacts-item menu-mobile__contacts--address">
+                Санкт-Петербург, ул. Ленина, 1
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#facebook-black');">
+                <span class="sr-only">перейти в фейсбук</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#youtube-black');">
+                <span class="sr-only">перейти на ютуб</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#telegram-black');">
+                <span class="sr-only">перейти в телеграм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#!" target="_blank"
+                style="background-image: url('images/sprite.svg#instagram-black');">
+                <span class="sr-only">перейти в инстаграм</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Доставка
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                О нас
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#news">
+                Новости
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#footer">
+                Контакты
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#promo">
+                Акции
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Вакансии
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Отзывы
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link" href="#!">
+                Публичная оферта
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <form class="search-mobile" name="form-search">
+      <label class="search__label" for="form-search__input--mobile">
+        <span class="sr-only">Поле для поиска товара в нашем магазине</span>
+      </label>
+      <input class="search__input" id="form-search__input--mobile" name="shop-search" type="search"
+        placeholder="Я ищу ..." required>
+      <button class="search__btn btn btn--dark" type="submit">Поиск</button>
+    </form>
+
+    <div class="basket__overlay">
+      <div class="basket">
+        <div class="basket__heading">
+          <div class="basket__heading-info">
+            <h1 class="basket__title">Корзина</h1>
+            <button class="basket__reset" type="reset">
+              очистить корзину
+            </button>
+          </div>
+
+          <button class="basket__close" type="button"></button>
+        </div>
+
+        <ul class="basket__list">
+          <li class="basket__item">
+            <div class="basket__content">
+              <img class="basket__img" src="images/cards/pineapple.jpg" alt="фото ананаса">
+
+              <div class="basket__text">
+                <div class="basket__desc">
+                  Ананас, 1 кг
+                </div>
+                <div class="basket__price">
+                  999<span>&#8381;</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="basket__result">
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="2" min="1">
+                </label>
+              </form>
+              <div class="basket__sum">
+                1998<span>&#8381;</span>
+              </div>
+            </div>
+
+            <button class="basket__remove" type="reset"></button>
+          </li>
+
+          <li class="basket__item">
+            <div class="basket__content">
+              <img class="basket__img" src="images/cards/pitahaya.jpg" alt="фото питахайи">
+
+              <div class="basket__text">
+                <div class="basket__desc">
+                  Питахайя красная с белой мякотью, 1шт
+                </div>
+                <div class="basket__price">
+                  1019<span>&#8381;</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="basket__result">
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="2" min="1">
+                </label>
+              </form>
+              <div class="basket__sum">
+                2038<span>&#8381;</span>
+              </div>
+            </div>
+
+            <button class="basket__remove" type="reset"></button>
+          </li>
+        </ul>
+
+        <div class="basket__coutn">
+          <div class="basket__count-subtitle">
+            Товаров на сумму
+          </div>
+          <div class="basket__count-sum">
+            4036<span>&#8381;</span>
+          </div>
+        </div>
+
+        <button class="basket__checkout btn" type="submit">
+          Оформить заказ
+        </button>
+      </div>
+    </div>
   </header>
 
   <main class="main">
@@ -223,50 +415,56 @@
     <section class="top-slider">
       <h2 class="sr-only">Наши акции</h2>
       <ul class="top-slider__slider">
-        <li class="top-slider__item" style="background-image: url('images/slider-top/01.jpg');">
-          <div class="container">
-            <div class="top-slider__wrap">
-              <div class="top-slider__inner">
-                <h3 class="top-slider__title">СВЕЖАЧОК ВАМ в ХАТУ
-                  <span class="top-slider__subtitle">Скидка -50%</span>
-                </h3>
-                <div class="top-slider__text">
-                  <p>
-                    Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-                  </p>
+        <li class="top-slider__item">
+          <div class="top-slider__box" style="background-image: url('images/slider-top/01.jpg');">
+            <div class="container">
+              <div class="top-slider__wrap">
+                <div class="top-slider__inner">
+                  <h3 class="top-slider__title">СВЕЖАЧОК ВАМ в ХАТУ
+                    <span class="top-slider__subtitle">Скидка -50%</span>
+                  </h3>
+                  <div class="top-slider__text">
+                    <p>
+                      Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                    </p>
+                  </div>
+                  <a class="top-slider__btn btn" href="#!">Купить сейчас</a>
                 </div>
-                <a class="top-slider__btn btn" href="#!">Купить сейчас</a>
               </div>
             </div>
           </div>
         </li>
 
-        <li class="top-slider__item" style="background-image: url('images/slider-top/02.jpg');">
-          <div class="container">
-            <div class="top-slider__wrap">
-              <div class="top-slider__inner">
-                <h3 class="top-slider__title">НАКРУТИ СЕБЕ ТОМАТОВ
-                  <span class="top-slider__subtitle">АКЦИЯ: 3 кг по цене 1</span>
-                </h3>
-                <div class="top-slider__text">
-                  <p>
-                    Только с 12 по 15 июля скидка на домашние помидорчики
-                  </p>
+        <li class="top-slider__item">
+          <div class="top-slider__box" style="background-image: url('images/slider-top/02.jpg');">
+            <div class="container">
+              <div class="top-slider__wrap">
+                <div class="top-slider__inner">
+                  <h3 class="top-slider__title">НАКРУТИ СЕБЕ ТОМАТОВ
+                    <span class="top-slider__subtitle">АКЦИЯ: 3 кг по цене 1</span>
+                  </h3>
+                  <div class="top-slider__text">
+                    <p>
+                      Только с 12 по 15 июля скидка на домашние помидорчики
+                    </p>
+                  </div>
+                  <a class="top-slider__btn btn" href="#!">Купить сейчас</a>
                 </div>
-                <a class="top-slider__btn btn" href="#!">Купить сейчас</a>
               </div>
             </div>
           </div>
         </li>
 
-        <li class="top-slider__item" style="background-image: url('images/slider-top/03.jpg');">
-          <div class="container">
-            <div class="top-slider__wrap">
-              <div class="top-slider__inner">
-                <h3 class="top-slider__title">Пусть остальные позеленеют от зависти
-                  <span class="top-slider__subtitle">Распродажа зелени</span>
-                </h3>
-                <a class="btn" href="#!">Купить сейчас</a>
+        <li class="top-slider__item">
+          <div class="top-slider__box" style="background-image: url('images/slider-top/03.jpg');">
+            <div class="container">
+              <div class="top-slider__wrap">
+                <div class="top-slider__inner">
+                  <h3 class="top-slider__title">Пусть остальные позеленеют от зависти
+                    <span class="top-slider__subtitle">Распродажа зелени</span>
+                  </h3>
+                  <a class="top-slider__btn btn" href="#!">Купить сейчас</a>
+                </div>
               </div>
             </div>
           </div>
@@ -280,7 +478,7 @@
           <li class="benefits__item benefits__item--delivery">
             <span class="benefits__title">Бесплатная доставка</span>
             <span class="benefits__text">
-              Для заказов на сумму от 500 <span>&#8381;</span>
+              Для заказов на сумму от 500&nbsp;<span>&#8381;</span>
             </span>
           </li>
           <li class="benefits__item benefits__item--return">
@@ -355,6 +553,11 @@
                   Ананас, 1кг
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -390,6 +593,11 @@
                   Лимон, 1кг
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -425,6 +633,11 @@
                   Питахайя красная с белой мякотью, 1шт
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -460,6 +673,11 @@
                   Перец оранжевый, 1кг
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -495,6 +713,11 @@
                   Морковь молодая с бабушкиной грядки, 1кг
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -530,6 +753,11 @@
                   Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="card-top__ex-price">299 <span>&#8381;</span></span>
@@ -565,6 +793,11 @@
                   Кофе с коноплей органический Caffé Salomoni 250г
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -600,6 +833,11 @@
                   Кетчуп томатный детский органический Bio-Zentrale 500мл
                 </h3>
               </div>
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1">
+                </label>
+              </form>
               <div class="card-top__bottom">
                 <div class="card-top__price">
                   <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
@@ -628,7 +866,7 @@
           </li>
           <li class="banner__item" style="background-image: url('images/banner/02.jpg');">
             <span class="banner__subtitle">Сезонная распродажа</span>
-            <span class="banner__title">овощепад до -50%</span>
+            <span class="banner__title">овощепад<br> до -50%</span>
             <a class="banner__link" href="#!">Перейти к покупкам</a>
           </li>
           <li class="banner__item" style="background-image: url('images/banner/03.jpg');">
@@ -640,11 +878,11 @@
       </div>
     </div>
 
-    <section class="goods-promo" data-ref="mixfilter-2">
+    <section class="goods-promo" id="promo" data-ref="mixfilter-2">
       <div class="container">
         <h2 class="title">Акции</h2>
 
-        <ul class="filter">
+        <ul class="filter goods-promo__filter">
           <li class="filter__item">
             <buttton class="filter__btn" data-filter="all" type="button">Все товары</buttton>
           </li>
@@ -998,7 +1236,7 @@
       </div>
     </div>
 
-    <section class="news">
+    <section class="news" id="news">
       <div class="container">
         <div class="news__heading">
           <h2 class="title news__title">Наши новости</h2>
@@ -1014,7 +1252,7 @@
                   <span class="news__number">15</span>
                 </time>
 
-                <img class="news__img" src="images/news/01.jpg" height="240" alt="фото клубники">
+                <img class="news__img" src="images/news/01.jpg" alt="фото клубники">
 
                 <h3 class="news__text">
                   Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
@@ -1032,7 +1270,7 @@
                   <span class="news__number">07</span>
                 </time>
 
-                <img class="news__img" src="images/news/02.jpg" height="240" alt="фото манго">
+                <img class="news__img" src="images/news/02.jpg" alt="фото манго">
 
                 <h3 class="news__text">
                   Шикарнейший выбор манго в нашем онлайн-маркете
@@ -1049,7 +1287,7 @@
                   <span class="news__number">20</span>
                 </time>
 
-                <img class="news__img" src="images/news/03.jpg" height="240" alt="фото папайи">
+                <img class="news__img" src="images/news/03.jpg" alt="фото папайи">
 
                 <h3 class="news__text">
                   Всё, что вы хотели знать о папайи
@@ -1062,10 +1300,10 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__top">
       <div class="container">
-        <a class="logo footer__logo" href="#!">
+        <a class="logo footer__logo" href="#home">
           <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="логотип ФрешОк">
         </a>
 
@@ -1086,7 +1324,7 @@
               <a class="footer__link" href="#!">О нас</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#!">Контакты</a>
+              <a class="footer__link" href="#footer">Контакты</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#!">Публичная оферта</a>
@@ -1098,13 +1336,13 @@
               <a class="footer__link" href="#!">Вакансии</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#!">Акции</a>
+              <a class="footer__link" href="#promo">Акции</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#!">Отзывы</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#!">Новости</a>
+              <a class="footer__link" href="#news">Новости</a>
             </li>
           </ul>
 

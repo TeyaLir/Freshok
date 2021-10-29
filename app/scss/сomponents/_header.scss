@@ -6,6 +6,10 @@
     color: $white;
     background-color: $base-light;
     padding: 3px 0;
+
+    @include max-w($md) {
+      display: none;
+    }
   }
 
   &__top-inner {
@@ -45,14 +49,59 @@
     }
 
     &--tel::before {
+      width: 23px;
       background-image: url('../images/sprite.svg#tel');
       left: 7px;
+    }
+  }
+
+  &__top-mobile {
+    display: none;
+
+    @include max-w($md) {
+      display: block;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $white;
+      background-color: $base-light;
+      padding: 3px 0;
+    }
+
+    .header__top-link {
+      height: 42px;
+      padding: 12px 0 12px 35px;
+      margin-right: 17px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .burger {
+      height: 45px;
+      width: 45px;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+
+      &__img {
+        width: 30px;
+        height: 20px;
+        @extend %bg-img;
+      }
     }
   }
 
   &__bottom {
     background-color: $main;
     padding: 25px 0;
+
+    @include max-w($md) {
+      padding: 19px 0;
+    }
+    @include max-w($xs) {
+      padding: 6px 0;
+    }
   }
 
   &__bottom-inner {
@@ -60,265 +109,22 @@
     justify-content: space-between;
     align-items: center;
   }
-}
 
-.menu {
-  display: flex;
-
-  &__item {
-    margin-right: 19px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
+  .logo {
     display: inline-block;
-    transition: opacity 0.3s;
-    padding: 12px 2px;
+    min-width: 200px;
+    margin-right: 20px;
 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
-
-.product-catalog {
-  position: relative;  
-
-  &__btn {
-    position: relative;
-    border: 0;
-
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.4;
-    color: $main;
-
-    height: 50px;
-    background-color: $white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-radius 0.5s;
-    padding: 15px 41px 15px 61px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 25px;
-      height: 17px;
-      background-image: url('../images/icons/nav-catalog.png');
-      @extend %bg-img;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 4px;
-      width: 8px;
-      background-image: url('../images/sprite.svg#arrow-down');
-      @extend %bg-img;
-    }
-
-    &:hover {
-      background-color: $main-lighter;
-    }
-
-    &--active {
-      border-radius: 6px 6px 0 0;
-      background-color: $main-lighter;
-
-      &::after {
-        transform: rotate(180deg) translateY(40%);
-      }
+    @include max-w($xs) {
+      display: none;
     }
   }
 
-  &__list {
+  .logo-mobile {
     display: none;
 
-    position: absolute;
-    top: 50px;
-    width: 100%;
-
-    background-color: $white;
-    border: 1px solid rgba($bg, 0.3);
-    border-radius: 0 0 6px 6px;
-    z-index: 2;
-    transition: transform 1s;
-
-    &--active {
+    @include max-w($xs) {
       display: block;
     }
-  }
-
-  &__item {
-    border-top: 1px solid rgba($bg, 0.3);
-
-    &:first-child {
-      border-top: none;
-    }
-  }
-
-  &__link {
-    display: block;
-    padding: 15px 24px;
-    font-weight: 400;
-    font-size: 16px;
-    color: $base;
-    border-left: 3px solid transparent;
-    transition: color 0.3s, border 0.3s;
-
-    &:hover {
-      color: $main;
-      border-left: 3px solid $main;
-    }
-  }
-}
-
-.search {
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-
-  &__label {
-    position: absolute;
-    z-index: 3;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border-radius: 3px;
-    transition: background-color 0.5s;
-
-    &:hover {
-      background-color: rgba(transparent, 0.1);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      background-image: url('../images/sprite.svg#search');
-      @extend %bg-img;
-    }
-  }
-
-  &__input {
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    color: $base-light;
-
-    position: relative;
-    height: 50px;
-    width: 420px;
-    background-color: $white;
-    box-shadow: 0 0 0 4px rgba($main, 0.2);
-    border-radius: 6px 0 0 6px;
-    transition: box-shadow 0.3s;
-    padding: 15px 15px 15px 51px;
-    @extend %focus;
-
-    &::placeholder {
-      color: $base-light;
-    }
-  }
-
-  &__btn {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    height: 50px;
-    border-radius: 0 6px 6px 0;
-    z-index: 1;
-    padding: 13px 52px 15px;
-  }
-}
-
-.user-nav {
-  display: flex;
-
-  &__item {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 11px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    border: 0;
-    position: relative;
-    display: block;
-    height: 50px;
-    width: 50px;
-    background-color: transparent;
-    border-radius: 3px;
-    transition: background-color 0.5s;
-
-    &:hover {
-      background-color: rgba(transparent, 0.1);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 32px;
-      width: 35px;
-      @extend %bg-img;
-    }
-
-    &--user::after {
-      background-image: url('../images/sprite.svg#user');
-    }
-
-    &--heart::after {
-      background-image: url('../images/sprite.svg#heart');
-    }
-
-    &--cart::after {
-      background-image: url('../images/sprite.svg#cart');
-    }
-  }
-
-  &__num {
-    position: absolute;
-    top: 2px;
-    right: 29px;
-    min-width: 18px;
-    height: 18px;
-    background-color: $white;
-    border-radius: 18px;
-
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 18px;
-    color: $accent-first;
-    text-align: center;
-    z-index: 1;
-    padding: 0 4px;
   }
 }

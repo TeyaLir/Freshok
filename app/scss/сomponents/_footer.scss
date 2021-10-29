@@ -6,21 +6,58 @@
   &__top {
     border-bottom: 1px solid rgba($white, 0.1);
     padding: 30px 0;
+    overflow: hidden;
+
+    @include max-w($xs) {
+      padding: 25px 0;
+    }
   }
 
   &__logo {
     display: block;
     margin-bottom: 29px;
+
+    @include max-w($xs) {
+      margin-bottom: 15px;
+    }
+
+    img {
+      @include max-w($sm) {
+        margin: 0 auto;
+      }
+    }
   }
 
   &__top-inner {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($lg) {
+      flex-wrap: wrap;
+    }
+
+    @include max-w($md) {
+      flex-direction: column-reverse;
+    }
+
+    @include max-w($sm) {
+      align-items: center;
+    }
+  }
+
+  &__form-wrap {
+    @include max-w($md) {
+      padding-top: 25px;
+    }
   }
 
   &__form {
     display: flex;
     margin-right: 72px;
+
+    @include max-w($sm) {
+      margin-right: 0;
+    }
   }
 
   &__form-subtitle {
@@ -49,8 +86,43 @@
   }
 
   &__list {
+    position: relative;
     column-count: 3;
     column-gap: 57px;
+
+    @include max-w($md) {
+      padding: 15px 0;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 1500px;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+        position: absolute;
+        left: -200px;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    @include max-w($sm) {
+      letter-spacing: 0;
+      column-count: 2;
+      column-gap: 45px;
+      padding-left: 35px;
+    }
+
+    @include max-w($xxs) {
+      column-gap: 25px;
+      padding-left: 8px;
+    }
   }
 
   &__link {
@@ -60,6 +132,12 @@
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  &__contacts {
+    @include max-w($md) {
+      padding-bottom: 20px;
     }
   }
 
@@ -80,11 +158,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include max-w($xs) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
 .social {
   display: flex;
+
+  @include max-w($sm) {
+    justify-content: center;
+  }
 
   &__item {
     margin-right: 12px;
@@ -108,6 +194,12 @@
 }
 
 .payment {
+
+  @include max-w($xs) {
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+
   &__item {
     display: inline-block;
     height: 29px;

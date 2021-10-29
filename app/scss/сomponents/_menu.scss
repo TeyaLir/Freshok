@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+
+  &__item {
+    margin-right: 19px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    transition: opacity 0.3s;
+    padding: 12px 2px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -52,18 +52,45 @@ body {
   text-transform: uppercase;
   color: $base;
   margin-bottom: 30px;
+
+  @include max-w($md) {
+    font-size: 30px;
+  }
+
+  @include max-w($sm) {
+    font-size: 28px;
+  }
+
+  @include max-w($xs) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .filter {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 
-  &__item {
+  @include max-w($xs) {
+    margin-bottom: 10px;
+  }
+
+  &__item {    
     margin-right: 24px;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include max-w($sm) {
+      margin-right: 18px;
+    }
+
+    @include max-w($xs) {
+      min-width: 95px;
+      margin-bottom: 15px;
     }
   }
 
@@ -81,6 +108,10 @@ body {
 
     &:hover {
       border-color: rgba($main, 0.2);
+    }
+
+    @include max-w($sm) {
+      font-size: 14px;
     }
   }
 
