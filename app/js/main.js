@@ -45,7 +45,33 @@ $(function () {
     arrows: false,
     slidesToShow: 6,
     slidesToScroll: 3,
-    // autoplay: true
+    // autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
   });
 
   // Числовое поле - прибавление/убавление количества товара в корзине

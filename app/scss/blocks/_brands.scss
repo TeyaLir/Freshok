@@ -1,6 +1,10 @@
 .brands {  
   padding: 70px 0 0;
 
+  @include max-w($xs) {
+    padding-top: 50px;
+  }
+
     &__item {
     opacity: 0.5;
     transition: opacity 0.3s;
