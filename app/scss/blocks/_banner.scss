@@ -37,12 +37,11 @@
       margin-right: 0;
     }
 
-    @include max-w($md) {
-      margin-bottom: 30px;
+    @include max-w($md) {      
       margin-right: 0;
 
-      &:last-child {
-        margin-bottom: 0;
+      &:first-child {
+        margin-bottom: 30px;
       }
 
       &:nth-child(2) {
