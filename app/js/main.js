@@ -85,6 +85,77 @@ $(function () {
   // Числовое поле - прибавление/убавление количества товара в корзине
   $('.basket__num').styler();
 
+  // Стилизация выбора сортировки товара на странице Каталог товаров ("По названию", "по 12")
+  $('.select-style').styler();
+
+
+  // Ползунок цены на старнице Каталог товаров
+  var $range = $(".filters-price__input-slider"),
+    $inputFrom = $(".filter-price__from"),
+    $inputTo = $(".filter-price__to"),
+    instance,
+    min = 0,
+    max = 1300,
+    from = 0,
+    to = 0;
+
+  $('.filters-price__input-slider').ionRangeSlider({
+    type: "double",
+    min: min,
+    max: max,
+    from: 100,
+    to: 1000,
+    onStart: updateInputs,
+    onChange: updateInputs,
+    onFinish: updateInputs
+  });
+
+  instance = $range.data("ionRangeSlider");
+    
+  function updateInputs (data) {
+      from = data.from;
+      to = data.to;
+  
+      $inputFrom.prop("value", from);
+      $inputTo.prop("value", to);
+  }
+  
+  $inputFrom.on("change", function () {
+      var val = $(this).prop("value");
+  
+      // validate
+      if (val < min) {
+          val = min;
+      } else if (val > to) {
+          val = to;
+      }
+  
+      instance.update({
+          from: val
+      });
+  
+      $(this).prop("value", val);
+  
+  });
+  
+  $inputTo.on("change", function () {
+      var val = $(this).prop("value");
+  
+      // validate
+      if (val < from) {
+          val = from;
+      } else if (val > max) {
+          val = max;
+      }
+  
+      instance.update({
+          to: val
+      });
+  
+      $(this).prop("value", val);
+  });
+
+  
 
   // MixItUp
   var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');

@@ -1,0 +1,173 @@
+.catalog {
+  &__title {
+    font-family: $ff-second;
+    font-weight: 700;
+    font-size: 42px;
+    color: $base;
+    padding: 50px 0;
+  }
+
+  &__wrapp {
+    display: flex;
+    margin-bottom: 70px;
+  }
+}
+
+.catalog-content {
+  max-width: 955px;
+  width: 100%;
+
+  &__filters {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+
+  &__filters-form {
+    margin-right: 15px;
+  }
+
+  &__filters-sort {
+    margin-right: 15px;
+  }
+
+  .jq-selectbox {
+
+    &__select {
+      box-shadow: none;
+      text-shadow: none;
+
+      height: 47px;
+      background: $white;
+      border: 1px solid $bg;
+      border-radius: 3px;
+
+
+      font-family: $ff-first;
+      font-weight: 400;
+      font-size: 14px;
+      color: $base-lighter;
+      padding: 15px 42px 12px 11px;
+    }
+
+    &__select-text {
+      line-height: 1;
+    }
+
+    &__trigger {
+      border-left: none;
+    }
+
+    &__trigger-arrow {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      width: 10px;
+      height: 6px;
+      border: none;
+
+      background-image: url('../images/icons/angle-up.svg');
+      @extend %bg-icon;
+      transform: rotate(180deg);
+    }
+
+    &.focused .jq-selectbox__select {
+      border: 1px solid $bg;
+      border-radius: 3px;
+      box-shadow: 0 0 0 4px $main-light;
+    }
+
+    li.selected {
+      background-color: $bg;
+    }
+
+    li:hover {
+      background-color: $bg;
+    }
+
+    &.dropdown.opened .jq-selectbox__select {
+      border: 1px solid #505050;
+      border-radius: 3px 3px 0 0;
+      box-shadow: none;
+
+      .jq-selectbox__trigger-arrow {
+        transform: rotate(0deg);
+      }
+    }
+
+    &__dropdown {
+      background: $white;
+      border: 1px solid $bg;
+      border-radius: 0 0 6px 6px;
+      box-shadow: none;
+      top: 45px !important;
+      width: 100% !important;
+    }
+  }
+
+  &__filters-btn {
+    outline: transparent;
+    border: none;
+    padding: 0;
+
+    position: relative;
+    width: 47px;
+    height: 47px;
+    background-color: $bg-light;
+    border-radius: 3px;
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 35px;
+      height: 35px;
+      fill: $bg;
+      transition: fill 0.3s;
+
+      &:hover {
+        fill: $main;
+      }
+    }
+  }
+
+  &__cards {
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(170px, 300px));
+    grid-gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @include max-w($lg) {
+      grid-template-columns: repeat(3, minmax(170px, 300px));
+    }
+
+    @include max-w($md) {
+      grid-template-columns: repeat(2, minmax(170px, 300px));
+    }
+
+    @include max-w($xs) {
+      grid-gap: 5px;
+      margin-bottom: 25px;
+    }
+
+    @include max-w($xxs) {
+      grid-template-columns: repeat(1, 210px);
+      grid-gap: 10px;
+    }
+  }
+
+  &__item {
+
+  }
+}

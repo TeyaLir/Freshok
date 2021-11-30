@@ -1,0 +1,38 @@
+.breadcrumbs {
+  background-color: $bg-light;
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: $base-lighter;
+    padding: 25px 15px 25px 0;
+    transition: color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 10px;
+      background-image: url('../images/icons/arrow-right-gray.svg');
+      @extend %bg-icon;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: $main;
+
+      &:last-child {
+        color: $base-lighter;
+      }
+    }
+  }
+}
