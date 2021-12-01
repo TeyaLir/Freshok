@@ -85,8 +85,28 @@ $(function () {
   // Числовое поле - прибавление/убавление количества товара в корзине
   $('.basket__num').styler();
 
-  // Стилизация выбора сортировки товара на странице Каталог товаров ("По названию", "по 12")
+  // Открытие|закрытие фильтров на странице Каталог товаров
+  $('.filters__title').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('filters__title--hide');
+  });
+
+  // Стилизация выбора сортировки товара (select) на странице Каталог товаров ("По названию", "по 12")
   $('.select-style').styler();
+
+  // Переключение стиля отображения товаров на странице Каталог товаров
+  $('.catalog-content__filters-btn').on('click', function () {
+    $('.catalog-content__filters-btn').removeClass('catalog-content__filters-btn--active');
+    $(this).addClass('catalog-content__filters-btn--active');
+  });
+
+  $('.button-list').on('click', function () {
+    $('.catalog-content__list').addClass('btn-list');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.catalog-content__list').removeClass('btn-list');
+  });
 
 
   // Ползунок цены на старнице Каталог товаров
@@ -155,7 +175,12 @@ $(function () {
       $(this).prop("value", val);
   });
 
-  
+  // Пагинация на странице Каталог товаров
+  $('.pagination__link').on('click', function () {
+    $('.pagination__link').removeClass('pagination__link--active');
+    $(this).addClass('pagination__link--active');
+  });
+
 
   // MixItUp
   var containerEl1 = document.querySelector('[data-ref="mixfilter-1"]');

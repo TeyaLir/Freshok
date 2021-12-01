@@ -13,11 +13,31 @@
   }
 
   &__title {
+    position: relative;
     font-family: $ff-second;
     font-size: 24px;
     color: $base;
     border-bottom: 1px solid $bg;
     padding: 18px 18px 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 11px;
+      background-image: url('../images/icons/angle-up.svg');
+      @extend %bg-icon;
+    }
+
+    &--hide {
+      &::after {
+        top: 45%;
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__item-content {
@@ -142,11 +162,7 @@
       border-color: $main;
     }
   }
-
-  &__label-slider {}
-
-  &__input-slider {}
-
+  
   .irs--flat {
     .irs-line {
       background-color: $bg;
