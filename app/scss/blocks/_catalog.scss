@@ -5,6 +5,15 @@
     font-size: 42px;
     color: $base;
     padding: 50px 0;
+
+    @include max-w($sm) {
+      font-size: 36px;
+    }
+
+    @include max-w($xs) {
+      font-size: 30px;
+      padding: 30px 0;
+    }
   }
 
   &__wrapp {
@@ -21,14 +30,64 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 50px;
+
+    @include max-w($md) {
+      justify-content: flex-start;
+    }
+
+    @include max-w($xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__filters-button {
+    display: none;
+
+    @include max-w($md) {
+      display: inline-block;
+    }
+
+    border: none;
+    padding: 0;
+    background-color: $bg-light;
+
+    position: relative;
+    width: 47px;
+    height: 47px;
+    border-radius: 3px;
+    margin-right: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 36px;
+      background-image: url('../images/icons/btn-filter.svg');
+      @extend %bg-icon;
+    }
+
+    @include max-w($xs) {
+      margin-right: 10px;
+    }
   }
 
   &__filters-form {
     margin-right: 15px;
+
+    @include max-w($ll) {
+      margin-right: 0;
+    }
   }
 
   &__filters-sort {
     margin-right: 15px;
+
+    @include max-w($xs) {
+      margin-right: 10px;
+    }
   }
 
   .jq-selectbox {
@@ -48,6 +107,10 @@
       font-size: 14px;
       color: $base-lighter;
       padding: 15px 42px 12px 11px;
+
+      @include max-w($xs) {
+        padding: 15px 25px 12px 6px;
+      }
     }
 
     &__select-text {
@@ -68,6 +131,10 @@
       background-image: url('../images/icons/angle-up.svg');
       @extend %bg-icon;
       transform: rotate(180deg);
+
+      @include max-w($xs) {
+        right: 5px;
+      }
     }
 
     &.focused .jq-selectbox__select {
@@ -140,6 +207,10 @@
         fill: $main;
       }
     }
+
+    @include max-w($ll) {
+      display: none;
+    }
   }
 
   &__list {
@@ -150,7 +221,7 @@
     margin-bottom: 50px;
 
     @include max-w($lg) {
-      grid-template-columns: repeat(3, minmax(170px, 300px));
+      grid-template-columns: repeat(2, minmax(170px, 300px));
     }
 
     @include max-w($md) {
@@ -168,7 +239,11 @@
     }
 
     &.btn-list {
-      grid-template-columns: repeat(2, 465px);
+      grid-template-columns: repeat(2, minmax(170px, 465px));
+
+      @include max-w($ll) {
+        display: none;
+      }
 
       .card-top {
         min-height: 0;
@@ -183,6 +258,7 @@
       .card-top__content {
         min-height: 0;
         height: 160px;
+        flex-grow: 0;
       }
 
       .badges {
@@ -210,8 +286,6 @@
       }
 
       .catalog-content__inner {
-        display: flex;
-        justify-content: space-between;
         width: 260px;
         padding: 16px 15px 5px 0;
       }
@@ -244,12 +318,24 @@
   }
 
   .card-top__title {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($sm) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      @include max-w($sm) {
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 
@@ -283,6 +369,16 @@
 
     svg {
       fill: $base-lighter;
+    }
+  }
+
+  &__item {
+    @include max-w($xs) {
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        display: none;
+      }
     }
   }
 

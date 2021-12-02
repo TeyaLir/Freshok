@@ -85,7 +85,13 @@ $(function () {
   // Числовое поле - прибавление/убавление количества товара в корзине
   $('.basket__num').styler();
 
-  // Открытие|закрытие фильтров на странице Каталог товаров
+  // Фильтры на мобильных версиях (появление / скрытие)
+  $('.catalog-content__filters-button, .filters__close').on('click', function () {
+    $('.filters').toggleClass('filters--active');
+    $('.filters__overlay').toggleClass('filters__overlay--active');
+  });
+
+  // Открытие|закрытие пунктов у фильтров на странице Каталог товаров
   $('.filters__title').on('click', function () {
     $(this).next().slideToggle();
     $(this).toggleClass('filters__title--hide');
@@ -131,48 +137,48 @@ $(function () {
   });
 
   instance = $range.data("ionRangeSlider");
-    
-  function updateInputs (data) {
-      from = data.from;
-      to = data.to;
-  
-      $inputFrom.prop("value", from);
-      $inputTo.prop("value", to);
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
   }
-  
+
   $inputFrom.on("change", function () {
-      var val = $(this).prop("value");
-  
-      // validate
-      if (val < min) {
-          val = min;
-      } else if (val > to) {
-          val = to;
-      }
-  
-      instance.update({
-          from: val
-      });
-  
-      $(this).prop("value", val);
-  
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+
+    $(this).prop("value", val);
+
   });
-  
+
   $inputTo.on("change", function () {
-      var val = $(this).prop("value");
-  
-      // validate
-      if (val < from) {
-          val = from;
-      } else if (val > max) {
-          val = max;
-      }
-  
-      instance.update({
-          to: val
-      });
-  
-      $(this).prop("value", val);
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+
+    $(this).prop("value", val);
   });
 
   // Пагинация на странице Каталог товаров
