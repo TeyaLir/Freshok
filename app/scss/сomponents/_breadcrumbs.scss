@@ -1,12 +1,9 @@
 .breadcrumbs {
   background-color: $bg-light;
 
-  &__link {
+  &__item {
     position: relative;
     display: inline-block;
-    font-size: 14px;
-    color: $base-lighter;
-    padding: 25px 15px 25px 0;
     transition: color 0.3s;
 
     &::after {
@@ -27,12 +24,20 @@
       }
     }
 
-    &:hover {
+    &:hover a{
       color: $main;
-
-      &:last-child {
-        color: $base-lighter;
-      }
     }
+
+    &:last-child:hover a {
+      color: $base-lighter;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    color: $base-lighter;
+    padding: 25px 15px 25px 0;
+    transition: color 0.3s;
   }
 }

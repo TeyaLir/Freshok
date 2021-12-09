@@ -22,9 +22,6 @@
     @include max-w($md) {
       height: 400px;
     }
-    @include max-w($sm) {
-      
-    }
     @include max-w($xs) {
       height: 320px;
     }
