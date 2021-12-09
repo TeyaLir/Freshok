@@ -168,3 +168,24 @@ body {
     }
   }
 }
+
+.check {
+  &__label {
+    display: block;
+    padding-left: 36px;
+    margin-bottom: 13px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+  }
+}

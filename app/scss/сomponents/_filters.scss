@@ -1,0 +1,275 @@
+.filters {
+  width: 300px;
+  margin-right: 30px;
+
+  @include max-w($md) {
+    transform: translateX(-150%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 320px;
+    height: 100vh;
+    overflow: scroll;
+    z-index: 15;
+    background: $white;
+    padding: 10px 20px 30px 0;
+
+    .simplebar-scrollbar::before {
+      background-color: $dark-lighter;
+      border-radius: 3px;
+      width: 4px;
+    }
+
+    .simplebar-track.simplebar-vertical {
+      width: 7px;
+    }
+
+    &--active {
+      transform: translateX(0);
+      transition: transform 0.5s;
+    }
+  }
+
+  &__overlay {
+    @include max-w($md) {
+      background-color: transparent;
+      z-index: 0;
+  
+      &--active {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+        z-index: 11;
+        background-color: rgba($black, 0.15);
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transition: background-color .5s;
+    margin-bottom: 10px;
+    margin-left: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+      background-image: url('../images/sprite.svg#close-btn');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    @include max-w($md) {
+      display: block;
+    }
+  }
+
+  &__item {
+    border: 1px solid $bg;
+    border-radius: 6px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-family: $ff-second;
+    font-size: 24px;
+    color: $base;
+    border-bottom: 1px solid $bg;
+    padding: 18px 18px 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 11px;
+      background-image: url('../images/icons/angle-up.svg');
+      @extend %bg-icon;
+    }
+
+    &--hide {
+      &::after {
+        top: 45%;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__item-content {
+    font-size: 18px;
+    color: $dark-lighter;
+  }
+}
+
+.filters-category {
+  &__list {
+    height: 300px;
+    overflow-y: auto;
+    padding: 12px 18px;
+
+    .simplebar-scrollbar::before {
+      background-color: $dark-lighter;
+      border-radius: 3px;
+      width: 4px;
+    }
+
+    .simplebar-track.simplebar-vertical {
+      width: 7px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 0;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $main;
+    }
+
+    &:active {
+      color: $bg;
+    }
+  }
+}
+
+.filters-offers {
+  &__form {
+    padding: 18px;
+  }
+
+  &__label {
+    display: block;
+    padding-left: 36px;
+    margin-bottom: 13px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+  }
+}
+
+.filters-brand {
+  &__form {
+    padding: 18px;
+  }
+
+  &__label {
+    display: block;
+    padding-left: 36px;
+    margin-bottom: 13px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+  }
+}
+
+.filters-price {
+  &__form {
+    padding: 18px;
+  }
+
+  &__wrapp {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label-num {
+    font-family: $ff-second;
+    font-weight: 400;
+    font-size: 16px;
+    color: $bg;
+  }
+
+  &__input-num {
+    width: 80px;
+    height: 40px;
+    background: $bg-light;
+    border: 1px solid $bg;
+    border-radius: 3px;
+    font-family: $ff-first;
+    color: $base-lighter;
+    text-align: center;
+    padding: 12px;
+
+    &:focus {
+      outline: transparent;
+      border-color: $main;
+    }
+  }
+
+  .irs--flat {
+    .irs-line {
+      background-color: $bg;
+      height: 2px;
+    }
+
+    .irs-handle {
+      top: 17px;
+      background-color: $main;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+
+      &>i:first-child {
+        display: none;
+      }
+    }
+
+    .irs-bar {
+      background-color: $main;
+      height: 2px;
+    }
+
+    .irs-from,
+    .irs-to,
+    .irs-single,
+    .irs-max,
+    .irs-min {
+      display: none;
+    }
+  }
+}

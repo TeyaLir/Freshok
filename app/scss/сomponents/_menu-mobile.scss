@@ -1,21 +1,25 @@
 .menu-mobile {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background-color: $white;
+  z-index: 12;
+  overflow: scroll;
+  transform: translateX(-200%);
+  transition: transform 0.5s;
 
   &--active {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    background-color: $white;
-    z-index: 12;
-    overflow: scroll;
+    transform: translateX(0);
+    transition: transform 0.5s;
   }
 
   &__overlay {
-    display: none;
+    transform: translateX(-200%);
 
     &--active {
+      transform: translateX(0);
+
       display: block;
       position: absolute;
       top: 0;
@@ -90,7 +94,7 @@
       background-color: $main-dark;
     }
   }
-  
+
   .product-catalog__list {
     top: 45px;
   }
