@@ -466,7 +466,7 @@
                       <img class="modal__slider-img" src="images/cards/pitahaya-2.jpg" alt="Фото питахайи">
                     </div>
                   </li>
-                        
+
                   <li class="modal__slider-item">
                     <div class="modal__slider-wrap">
                       <img class="modal__slider-img" src="images/cards/pitahaya-3.jpg" alt="Фото питахайи">
@@ -483,11 +483,11 @@
             </div>
           </div>
 
-          <div class="product__desc">
-            <h1 class="product__title">
-              Питахайя красная с белой мякотью
-            </h1>
+          <h1 class="product__title">
+            Питахайя красная с белой мякотью
+          </h1>
 
+          <div class="product__desc">
             <div class="badges">
               <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
               <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
@@ -495,9 +495,11 @@
             </div>
 
             <div class="product__info">
-              <span class="product__code">Код: 0111111</span>
-
-              <span class="stars" data-rateyo-rating="4"></span>
+              <div class="product__info-inner">
+                <span class="product__code">Код: 0111111</span>
+  
+                <span class="stars" data-rateyo-rating="4"></span>
+              </div>
 
               <div class="available">
                 <span class="available__status" style="color: #63a60f;">В наличии</span>
@@ -521,6 +523,8 @@
               <button class="btn product__btn" type="button">
                 Добавить в корзину
               </button>
+
+              <button class="btn product__btn-cart" type="button"></button>
 
               <button class="card-top__heart" type="button">
                 <svg class="card-top__heart-img">
@@ -546,7 +550,6 @@
                 Подробнее
               </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -555,7 +558,7 @@
         <div class="container">
           <div class="tabs__wrap">
             <div class="tabs__top">
-              <a class="tabs__top-item" href="#tab-1">
+              <a class="tabs__top-item tabs__top-item--active" href="#tab-1">
                 Описание
               </a>
 
@@ -563,13 +566,13 @@
                 Характеристики
               </a>
 
-              <a class="tabs__top-item tabs__top-item--active" href="#tab-3 ">
+              <a class="tabs__top-item" href="#tab-3 ">
                 Отзывы <span class="tabs-reviews__num">(2)</span>
               </a>
             </div>
 
             <div class="tabs__content">
-              <div class="tabs__content-item tabs__content-item--desc" id="tab-1">
+              <div class="tabs__content-item tabs__content-item--desc  tabs__content-item--active" id="tab-1">
                 <p>
                   Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
                   укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
@@ -624,7 +627,7 @@
                 </li>
               </ul>
 
-              <div class="tabs__content-item tabs__content-item--reviews tabs__content-item--active" id="tab-3">
+              <div class="tabs__content-item tabs__content-item--reviews" id="tab-3">
                 <h3 class="tabs-reviews__title">
                   Мнения наших клиентов
                 </h3>

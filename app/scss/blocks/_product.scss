@@ -1,17 +1,40 @@
 .product {
   padding: 50px 0;
 
+  @include max-w($xs) {
+    padding: 30px 0 40px;
+  }
+
   &__wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(400px, 630px) minmax(400px, 630px);
+    grid-template-rows: auto 520px;
+    grid-gap: 10px 30px;
+
+    @include max-w($md) {
+      grid-template-columns: 100%;
+      grid-template-rows: auto 440px auto;
+      grid-gap: 30px;
+    }
+
+    @include max-w($ssm) {
+      grid-template-rows: auto 300px auto;
+    }
   }
 
   &__slider {
-    max-width: 630px;
     width: 100%;
     border: 1px solid $bg;
     border-radius: 4px;
-    margin-right: 30px;
     margin-bottom: 60px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    @include max-w($md) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+      margin-bottom: 0;
+    }
 
     .slick-prev,
     .slick-next {
@@ -63,28 +86,67 @@
     .slick-next {
       right: 3%;
     }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li {
+        display: inline-block;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      button {
+        padding: 0;
+        font-size: 0;
+
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $white;
+        border: 1px solid $bg;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+    }
+
+    .slick-active button {
+      background-color: $main;
+      border-color: $main;
+    }
   }
 
   &__slider-wrap {
-    max-width: 630px;
-    width: 100%;
-    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 50px;
+
+    @include max-w($ssm) {
+      padding: 20px;
+    }
   }
 
   &__slider-img {
     width: 420px;
     height: 420px;
     object-fit: contain;
-  }
 
-  &__desc {
-    max-width: 645px;
-    width: 100%;
-    position: relative;
+    @include max-w($md) {
+      width: 340px;
+      height: 340px;
+    }
+
+    @include max-w($ssm) {
+      width: 250px;
+      height: 250px;
+    }
   }
 
   &__title {
@@ -92,7 +154,32 @@
     font-weight: 600;
     font-size: 32px;
     color: $base;
-    margin-bottom: 20px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include max-w($md) {
+      grid-column: 1;
+      grid-row: 1 / 2;
+    }
+
+    @include max-w($ssm) {
+      font-size: 30px;
+    }
+
+    @include max-w($xs) {
+      font-size: 26px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    @include max-w($md) {
+      grid-column: 1;
+      grid-row: 3 / 4;
+    }
   }
 
   .badges {
@@ -109,8 +196,20 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-bottom: 30px;
+
+    @include max-w($xs) {
+      height: 60px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__info-inner {
+    display: flex;
+    align-items: center;
   }
 
   &__code {
@@ -124,7 +223,6 @@
   }
 
   .available {
-    margin-left: auto;
     font-size: 16px;
   }
 
@@ -132,6 +230,10 @@
 
     &__price {
       margin-bottom: 60px;
+
+      @include max-w($md) {
+        margin-bottom: 40px;
+      }
     }
 
     &__ex-price {
@@ -186,7 +288,8 @@
     }
   }
 
-  &__btn {
+  &__btn,
+  &__btn-cart {
     position: relative;
     font-weight: 600;
     line-height: 1;
@@ -204,6 +307,21 @@
       height: 24px;
       background-image: url('../images/icons/cart.svg');
       @extend %bg-icon;
+    }
+  }
+
+  &__btn {
+    @include max-w($lg) {
+      display: none;
+    }
+  }
+
+  &__btn-cart {
+    display: none;
+    padding-right: 0;
+
+    @include max-w($lg) {
+      display: inline-block;
     }
   }
 
@@ -240,8 +358,10 @@
   }
 
   &__delivery-link {
+    display: inline-block;
     color: $main;
     font-size: 14px;
+    margin-bottom: 40px;
 
     &:hover {
       opacity: 0.7;
@@ -271,13 +391,16 @@
     width: 90%;
     height: 90%;
     vertical-align: middle;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 15px;
     cursor: default;
     margin: 50px auto 0;
 
-    @media (max-width: 1024px) {
-      width: 90%;
+    @include max-w($ssm) {
+      border-radius: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
     }
 
     &.modal-open {
@@ -299,6 +422,11 @@
     margin-bottom: 10px;
     margin-left: auto;
 
+    @include max-w($ssm) {
+      right: 10px;
+      top: 10px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -311,6 +439,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+
+      @include max-w($ssm) {
+        width: 18px;
+        height: 18px;
+      }
     }
 
     &:hover {
@@ -400,20 +533,20 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-  
+
       li {
         display: inline-block;
         margin-right: 10px;
-  
+
         &:last-child {
           margin-right: 0;
         }
       }
-  
+
       button {
         padding: 0;
         font-size: 0;
-  
+
         width: 11px;
         height: 11px;
         border-radius: 50%;
@@ -422,7 +555,7 @@
         transition: background-color 0.3s, border-color 0.3s;
       }
     }
-  
+
     .slick-active button {
       background-color: $main;
       border-color: $main;
@@ -434,6 +567,10 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+
+    @include max-w($ssm) {
+      padding-top: 100px;
+    }
   }
 
   &__slider-img {
@@ -441,6 +578,11 @@
     height: 750px;
     object-fit: contain;
     margin-bottom: 50px;
+
+    @include max-w($ssm) {
+      width: 300px;
+      height: 300px;
+    }
   }
 }
 
@@ -461,10 +603,28 @@
     max-width: 690px;
     width: 100%;
     margin: 0 auto 70px;
+
+    @include max-w($sm) {
+      margin: 0 auto 20px;
+    }
   }
 
   &__top {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 50px;
+
+    @include max-w($md) {
+      margin-bottom: 35px;
+    }
+
+    @include max-w($xs) {
+      margin-bottom: 30px;
+    }
+
+    @include max-w($xxs) {
+      flex-direction: column;
+    }
   }
 
   &__top-item {
@@ -474,8 +634,23 @@
     font-size: 18px;
     color: $base;
     text-transform: uppercase;
+    border-top: 3px solid transparent;
     padding-top: 40px;
-    margin-right: 140px;
+
+    @include max-w($md) {
+      font-size: 16px;
+      padding-top: 30px;
+    }
+
+    @include max-w($xs) {
+      font-size: 14px;
+      padding-top: 15px;
+    }
+
+    @include max-w($xxs) {
+      border-top: none;
+      padding: 15px 0 5px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -484,6 +659,10 @@
     &--active {
       color: $main;
       border-top: 3px solid $main;
+
+      @include max-w($xxs) {
+        border-top: none;
+      }
     }
   }
 
@@ -506,15 +685,18 @@
     }
 
     &--characteristic {
-      p {
-        display: inline-block;
-        font-weight: 700;
-        line-height: 1.6;
-        margin-bottom: 5px;
+      li {
+        margin-bottom: 15px;
 
         &:last-child {
           margin-bottom: 0;
         }
+      }
+
+      p {
+        display: inline-block;
+        font-weight: 700;
+        line-height: 1.2;
       }
     }
   }
@@ -529,10 +711,18 @@
     text-transform: uppercase;
     color: $base;
     margin-bottom: 50px;
+
+    @include max-w($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     margin-bottom: 70px;
+
+    @include max-w($sm) {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -620,16 +810,30 @@
     width: 400px;
     height: 165px;
     resize: none;
+
+    @include max-w($sm) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
     width: 260px;
+
+    @include max-w($sm) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__form-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
+    @include max-w($sm) {
+      flex-direction: column;
+    }
   }
 
   &__form-inner {
@@ -638,17 +842,21 @@
     justify-content: space-between;
   }
 
-  .check__text {
-    font-size: 14px;
-  }
-
   &__btn {
     margin-top: 12px;
   }
 }
 
+.check__text {
+  font-size: 14px;
+}
+
 .related {
   margin-bottom: 50px;
+
+  @include max-w($sm) {
+    margin-bottom: 60px;
+  }
 
   &__title {
     font-family: $ff-second;
@@ -657,6 +865,15 @@
     text-transform: uppercase;
     color: $black;
     margin-bottom: 60px;
+
+    @include max-w($sm) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    @include max-w($xs) {
+      font-size: 24px;
+    }
   }
 
   .slick-slide+.slick-slide {
@@ -719,5 +936,55 @@
 
   .slick-next {
     right: 0;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      padding: 0;
+      font-size: 0;
+
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: $white;
+      border: 1px solid $bg;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+  }
+
+  .slick-active button {
+    background-color: $main;
+    border-color: $main;
+  }
+
+  .card-top {
+
+    @include max-w($ssm) {
+      min-height: 475px;
+    }
+
+    &__heart {
+      background-color: transparent !important;
+    }
+
+    &__wrap-img {
+      @include max-w($xs) {
+        height: 230px;
+      }
+    }
   }
 }
