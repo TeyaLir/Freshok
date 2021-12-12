@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФрешОк Онлайн-маркет | Страница товара</title>
+  <link rel="shortcut icon" href="images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="images/favicon/favicon-512x512.png" type="image/png" sizes="512x512">
+  <link rel="shortcut icon" href="images/favicon/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  {% include 'app/module/_header.html' %}
+
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="catalog.html">
+              Каталог товаров
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="product.html">
+              Питахайя красная с белой мякотью
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="product">
+      <div class="container">
+        <div class="product__wrap">
+          <ul class="product__slider">
+            <li class="product__slider-item">
+              <div class="product__slider-wrap" data-path="first">
+                <img class="product__slider-img" src="images/cards/pitahaya-2.jpg" alt="Фото питахайи">
+              </div>
+            </li>
+
+            <li class="product__slider-item">
+              <div class="product__slider-wrap" data-path="first">
+                <img class="product__slider-img" src="images/cards/pitahaya-3.jpg" alt="Фото питахайи">
+              </div>
+            </li>
+
+            <li class="product__slider-item">
+              <div class="product__slider-wrap" data-path="first">
+                <img class="product__slider-img" src="images/cards/pitahaya-4.jpg" alt="Фото питахайи">
+              </div>
+            </li>
+          </ul>
+
+          <div class="modal" data-target="first">
+            <div class="modal__container">
+              <button class="modal__close" type="button"></button>
+
+              <div class="modal__content">
+                <ul class="modal__slider">
+                  <li class="modal__slider-item">
+                    <div class="modal__slider-wrap">
+                      <img class="modal__slider-img" src="images/cards/pitahaya-2.jpg" alt="Фото питахайи">
+                    </div>
+                  </li>
+
+                  <li class="modal__slider-item">
+                    <div class="modal__slider-wrap">
+                      <img class="modal__slider-img" src="images/cards/pitahaya-3.jpg" alt="Фото питахайи">
+                    </div>
+                  </li>
+
+                  <li class="modal__slider-item">
+                    <div class="modal__slider-wrap">
+                      <img class="modal__slider-img" src="images/cards/pitahaya-4.jpg" alt="Фото питахайи">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="product__title">
+            Питахайя красная с белой мякотью
+          </h1>
+
+          <div class="product__desc">
+            <div class="badges">
+              <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
+              <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+              <span class="badge" style="background-color: #ff7a00;">Хит</span>
+            </div>
+
+            <div class="product__info">
+              <div class="product__info-inner">
+                <span class="product__code">Код: 0111111</span>
+  
+                <span class="stars" data-rateyo-rating="4"></span>
+              </div>
+
+              <div class="available">
+                <span class="available__status" style="color: #63a60f;">В наличии</span>
+                <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+              </div>
+            </div>
+
+            <div class="card-top__price">
+              <span class="card-top__ex-price">1999 <span>&#8381;</span></span>
+              <span class="card-top__today-price">1019 <span>&#8381;</span></span>
+            </div>
+
+            <div class="product__add">
+              <form class="basket__form" name="basket__form" action="#!">
+                <label class="basket__label">
+                  <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                </label>
+              </form>
+
+              <button class="btn product__btn" type="button">
+                Добавить в корзину
+              </button>
+
+              <button class="btn product__btn-cart" type="button"></button>
+
+              <button class="card-top__heart" type="button">
+                <svg class="card-top__heart-img">
+                  <use xlink:href="images/sprite.svg#heart-card"></use>
+                </svg>
+                <span class="sr-only">поместить товар в избранное</span>
+              </button>
+            </div>
+
+            <div class="product__delivery">
+              <h2 class="product__delivery-title">
+                Доставка и оплата
+              </h2>
+
+              <div class="product__delivery-text">
+                <p>Минимальная сумма заказа - 100 руб.</p>
+                <p>Время доставки заказа - 60-120 мин.</p>
+                <p>Оплата осуществляется только банковской картой.</p>
+                <p>Окончательная сумма заказа формируется после сбора товаров.</p>
+              </div>
+
+              <a class="product__delivery-link" href="#!">
+                Подробнее
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="container">
+          <div class="tabs__wrap">
+            <div class="tabs__top">
+              <a class="tabs__top-item tabs__top-item--active" href="#tab-1">
+                Описание
+              </a>
+
+              <a class="tabs__top-item" href="#tab-2">
+                Характеристики
+              </a>
+
+              <a class="tabs__top-item" href="#tab-3 ">
+                Отзывы <span class="tabs-reviews__num">(2)</span>
+              </a>
+            </div>
+
+            <div class="tabs__content">
+              <div class="tabs__content-item tabs__content-item--desc  tabs__content-item--active" id="tab-1">
+                <p>
+                  Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+                  укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
+                  Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
+                  питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы.
+                  Так
+                  как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+                </p>
+
+                <p>
+                  Витамины: С, Е, РР, витамины группы В
+                </p>
+
+                <p>
+                  Микроэлементы: железо, калий, кальций, магний, фосфор
+                </p>
+
+                <p>
+                  Внешний вид товара может отличаться от изображений, представленных на сайте.
+                </p>
+              </div>
+
+              <ul class="tabs__content-item tabs__content-item--characteristic" id="tab-2">
+                <li>
+                  <p>Вес:</p>
+                  <span>250-350 г;</span>
+                </li>
+
+                <li>
+                  <p>Калорийность (на 100г):</p>
+                  <span>50 ккал;</span>
+                </li>
+
+                <li>
+                  <p>Условия хранения:</p>
+                  <span>температура от +3 до +8;</span>
+                </li>
+
+                <li>
+                  <p>Другие названия:</p>
+                  <span></span>Драконов фрукт, Глаз дракона;
+                </li>
+
+                <li>
+                  <p>Страна происхождения:</p>
+                  <span>Вьетнам;</span>
+                </li>
+
+                <li>
+                  <p>Срок хранения:</p>
+                  <span>до 5 дней.</span>
+                </li>
+              </ul>
+
+              <div class="tabs__content-item tabs__content-item--reviews" id="tab-3">
+                <h3 class="tabs-reviews__title">
+                  Мнения наших клиентов
+                </h3>
+
+                <ul class="tabs-reviews__list">
+                  <li class="tabs-reviews__item">
+                    <div class="tabs-reviews__top">
+                      <div class="tabs-reviews__imgwrap">
+                        <img class="tabs-reviews__img" src="images/reviews/avatar.jpg" alt="аватар пользователя">
+                      </div>
+
+                      <div class="tabs-reviews__info">
+                        <p class="tabs-reviews__name">Андрей</p>
+                        <time class="tabs-reviews__date">10.06.2021</time>
+                      </div>
+
+                      <span class="tabs-reviews__stars stars" data-rateyo-rating="4"></span>
+                    </div>
+
+                    <p class="tabs-reviews__text">
+                      Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                    </p>
+                  </li>
+
+                  <li class="tabs-reviews__item">
+                    <div class="tabs-reviews__top">
+                      <div class="tabs-reviews__imgwrap">
+                        <img class="tabs-reviews__img" src="images/reviews/avatar.jpg" alt="аватар пользователя">
+                      </div>
+
+                      <div class="tabs-reviews__info">
+                        <p class="tabs-reviews__name">Екатерина Белая</p>
+                        <time class="tabs-reviews__date">7.06.2021</time>
+                      </div>
+
+                      <span class="tabs-reviews__stars stars" data-rateyo-rating="5"></span>
+                    </div>
+
+                    <p class="tabs-reviews__text">
+                      Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
+                      Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
+                      экзотические фрукты.
+                    </p>
+                  </li>
+                </ul>
+
+                <form class="tabs-reviews__form" name="tabs-reviews__form" action="!#">
+                  <h3 class="tabs-reviews__title">
+                    Оставить отзыв
+                  </h3>
+
+                  <div class="tabs-reviews__rating">
+                    <label class="tabs-reviews__label">Ваша оценка *
+                      <input class="check__input" name="check__input" type="checkbox" required>
+                      <span class="stars__form" data-rateyo-full-star="true"></span>
+                    </label>
+                  </div>
+
+                  <div class="tabs-reviews__form-wrap">
+                    <label class="tabs-reviews__label">
+                      Ваш отзыв *
+                      <textarea class="tabs-reviews__textarea" name="tabs-reviews__form-textarea"
+                        placeholder="Введите текст отзыва" required></textarea>
+                    </label>
+
+                    <div class="tabs-reviews__form-inner">
+                      <label class="tabs-reviews__label">
+                        Имя
+                        <input class="tabs-reviews__input" name="tabs-reviews__input" type="text"
+                          placeholder="Введите ваше имя">
+                      </label>
+
+                      <label class="tabs-reviews__label">
+                        Email *
+                        <input class="tabs-reviews__input" name="tabs-reviews__input" type="email" required
+                          placeholder="youremail@mail.com">
+                      </label>
+                    </div>
+                  </div>
+
+                  <label class="check__label">
+                    <input class="check__input" name="check__input" type="checkbox">
+                    <span class="filters-checkbox check__checkbox"></span>
+                    <span class="check__text">Сохранить моё имя, email и адрес сайта в этом браузере для последующих
+                      моих комментариев.</span>
+                  </label>
+
+                  <button class="tabs-reviews__btn btn" type="submit">Оставить отзыв</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="container">
+        <h3 class="related__title">
+          Вас может заинтересовать
+        </h3>
+
+        <ul class="related__slider">
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="hide badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/pineapple.jpg" height="215" alt="фото ананаса">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Ананас, 1кг
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">999 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="hide badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/lemon.jpg" height="215" alt="фото лемона">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Лимон, 1кг
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">199 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/pitahaya.jpg" height="215" alt="фото питахайи">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="hide available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Питахайя красная с белой мякотью, 1шт
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">1019 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="hide badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/pepper.jpg" height="215" alt="фото перца">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Перец оранжевый, 1кг
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">349 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/carrot.jpg" height="215" alt="фото моркови">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="hide available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Морковь молодая с бабушкиной грядки, 1кг
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">49 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+
+          <li class="related__item">
+            <div class="related__slider-wrap">
+              <article class="card-top">
+                <div class="card-top__top">
+                  <div class="badges">
+                    <span class="hide badge" style="background-color: #63a60f;">Новинка</span>
+                    <span class="hide badge" style="background-color: #cf3e3b;">-50%</span>
+                    <span class="hide badge" style="background-color: #ff7a00;">Хит</span>
+                  </div>
+                  <button class="card-top__heart" type="button">
+                    <svg class="card-top__heart-img">
+                      <use xlink:href="images/sprite.svg#heart-card"></use>
+                    </svg>
+                    <span class="sr-only">поместить товар в избранное</span>
+                  </button>
+                </div>
+
+                <div class="card-top__content">
+                  <a class="card-top__wrap-img" href="#!">
+                    <img class="card-top__img" src="images/cards/lemon.jpg" height="215" alt="фото лемона">
+                  </a>
+
+                  <div class="catalog-content__inner">
+                    <div class="available">
+                      <span class="available__status" style="color: #63a60f;">В наличии</span>
+                      <span class="hide available__status" style="color: #c1c1c1;">Нет в наличии</span>
+                      <span class="hide available__status" style="color: #cf3e3b;">Заканчивается</span>
+                    </div>
+
+                    <span class="card-promo__star">4.5</span>
+                  </div>
+
+                  <h3 class="card-top__title">
+                    Лимон, 1кг
+                  </h3>
+                </div>
+
+                <div class="card-top__bottom">
+                  <div class="card-top__price">
+                    <span class="hide card-top__ex-price">1999 <span>&#8381;</span></span>
+                    <span class="card-top__today-price">199 <span>&#8381;</span></span>
+                  </div>
+
+                  <form class="basket__form" name="basket__form" action="#!">
+                    <label class="basket__label">
+                      <input class="basket__num" name="basket__num" type="number" value="1" min="1" max="99">
+                    </label>
+                  </form>
+
+                  <button class="card-top__basket btn" type="button">
+                    <span class="sr-only">поместить товар в корзину</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  {% include 'app/module/_footer.html' %}
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
