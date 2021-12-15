@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const nunjucksRender = require('gulp-nunjucks-render');
 const svgSprite = require('gulp-svg-sprite');
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -91,6 +92,13 @@ function svgsprite() {
     .pipe(dest('app/images'))
 }
 
+function nunjucks() {
+  return src('app/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
+
 function cleanDist() {
   return del('dist')
 }
@@ -110,15 +118,18 @@ function watching() {
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/**/*.svg'], svgsprite);
+  // watch(['app/*.njk'], nunjucks);
+  watch('app/module/**/*.html', nunjucks)
 }
 
-exports.styles = styles;
-exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
+exports.styles = styles;
+exports.scripts = scripts;
 exports.svgsprite = svgsprite;
 exports.images = images;
+exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, svgsprite, browsersync, watching);
+exports.default = parallel(styles, scripts, svgsprite, nunjucks, browsersync, watching);

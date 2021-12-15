@@ -181,7 +181,7 @@ $(function () {
     $(this).prop("value", val);
   });
 
-  
+
   // Пагинация на странице Каталог товаров
   $('.pagination__link').on('click', function () {
     $('.pagination__link').removeClass('pagination__link--active');
@@ -194,6 +194,16 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: '<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
     nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+    ]
   });
 
   // Слайдер товара на странице Товара в модальном окне
@@ -209,7 +219,7 @@ $(function () {
   $('.stars').rateYo({
     starSvg: '<svg><use xlink:href="images/sprite.svg#star-rateyo"></use></svg>',
     starWidth: "16px",
-    normalFill: "#c1c1c1",
+    normalFill: "#f6f6f6",
     ratedFill: "#ffb800",
     spacing: "6px",
     readOnly: true
@@ -240,6 +250,33 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: '<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
     nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
+
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
   });
 
   // MixItUp
