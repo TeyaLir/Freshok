@@ -116,10 +116,10 @@ function build() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/**/*.svg'], svgsprite);
-  // watch(['app/*.njk'], nunjucks);
-  watch('app/module/**/*.html', nunjucks)
+  watch(['app/*.njk'], nunjucks);
+  // watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch('app/module/*.html', nunjucks)
 }
 
 exports.browsersync = browsersync;

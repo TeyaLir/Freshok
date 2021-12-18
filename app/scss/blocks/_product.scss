@@ -600,7 +600,7 @@
   border-top: 1px solid $bg;
 
   &__wrap {
-    max-width: 690px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto 70px;
 
@@ -874,6 +874,10 @@
     @include max-w($xs) {
       font-size: 24px;
     }
+  }
+
+  .card-top {
+    min-height: 440px;
   }
 
   .slick-slide+.slick-slide {
