@@ -5,22 +5,6 @@
     padding: 40px 0 50px;
   }
 
-  &__link {
-    color: $main;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1;
-    border-bottom: 2px solid $main;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
-
-    &:hover {
-      color: $main-dark;
-      border-bottom: 2px solid $main-dark;
-    }
-  }
-
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -37,6 +21,22 @@
 
     @include max-w($xs) {
       margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    color: $main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    border-bottom: 2px solid $main;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: $main-dark;
+      border-bottom: 2px solid $main-dark;
     }
   }
 
@@ -70,8 +70,15 @@
       margin-right: 0;
     }
 
-    &:hover .news__text {
-      color: $main;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px $main-light;
+    }
+
+    &:hover {
+      .news-card__text {
+        color: $main;
+      }
     }
 
     @include max-w($md) {
@@ -85,13 +92,23 @@
     }
 
     @include max-w($sm) {
-      max-width: 88%;
+      max-width: 70%;
       margin-right: 0;
       margin-bottom: 15px;
     }
 
     @include max-w($xs) {
       max-width: 100%;
+    }
+  }
+}
+
+.news-card {
+  &__link {
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
     }
   }
 

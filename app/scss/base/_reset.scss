@@ -51,10 +51,50 @@ select {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+	border: 0;	
+
+	&:focus {
+		outline: 0;
+		border-radius: 5px;
+		box-shadow: 0 0 0 4px $main-light;
+	}
 }
 
 button {
-  color: inherit;
-  cursor: pointer;
+  display: inline-block;
+	appearance: none;
+	border: 0;
+	border-radius: 5px;
+	background-color: transparent;
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+	font-size: 16px;
+	line-height: 1;
+	padding: 8px 16px;
+	transition: background-color 0.3s ease, box-shadow 0.4s linear;
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 0 4px $main-light;
+	}
+	
+	&:hover {
+		background-color: $main-dark;
+	}
+
+	&:active {
+    box-shadow: inset 0 4px 4px rgba($black, 0.25);
+    color: rgba($white, 0.5);
+		transform: translateY(2px);
+	}
+}
+
+input,
+label {
+	&:focus {
+		outline: 0;
+		border-radius: 3px;
+		box-shadow: 0 0 0 4px $main-light;
+	}
 }

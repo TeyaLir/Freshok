@@ -67,7 +67,7 @@ body {
   }
 }
 
-.filter {
+.mix-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -97,17 +97,24 @@ body {
   &__btn {
     padding: 0;
     border: 0;
+    background-color: transparent;
 
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
     color: $base-lighter;
     cursor: pointer;
+    border-radius: 0;
     border-bottom: 3px solid transparent;
     transition: border-color 0.3s;
 
+    &:focus {
+      border-radius: 3px;
+    }
+
     &:hover {
       border-color: rgba($main, 0.2);
+      background-color: transparent;
     }
 
     @include max-w($sm) {

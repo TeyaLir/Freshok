@@ -1,6 +1,5 @@
 .card-top {
   position: relative;
-  min-height: 410px;
   height: 100%;
   background-color: $white;
   border: 1px solid rgba($base, 0.2);
@@ -16,7 +15,6 @@
   }
 
   @include max-w($xs) {
-    min-height: 304px;
   }
 
   &__top {
@@ -33,6 +31,15 @@
     border: none;
     background-color: transparent;
     padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    @include max-w($xs) {
+      width: 25px;
+      height: 22px;
+    }
   }
 
   &__heart-img {
@@ -114,7 +121,8 @@
     margin: 0 auto;
 
     @include max-w($xs) {
-      object-position: top;
+      height: 120px !important;
+      // object-position: top;
     }
   }
 
@@ -138,7 +146,7 @@
     min-height: 50px;
     padding: 0 17px 17px;
 
-    @include max-w($ssm) {
+    @include max-w($sm) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 45px 40px;
     }
@@ -147,7 +155,7 @@
   &__price {
     justify-self: start;
 
-    @include max-w($ssm) {
+    @include max-w($sm) {
       grid-row-start: 2;
       grid-row-end: 3;
       grid-column-start: 1;
@@ -182,7 +190,7 @@
   .basket__form {
     margin-bottom: 4px;
 
-    @include max-w($ssm) {
+    @include max-w($sm) {
       grid-row-start: 1;
       grid-row-end: 2;
       grid-column-start: 1;
@@ -214,7 +222,7 @@
       opacity: 0.5;
     }
 
-    @include max-w($ssm) {
+    @include max-w($sm) {
       grid-row-start: 2;
       grid-row-end: 3;
       grid-column-start: 2;

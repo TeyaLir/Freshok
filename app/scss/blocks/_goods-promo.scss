@@ -32,14 +32,14 @@
     }
   }
 
-  &__filter {
+  &__mix-nav {
 
     @include max-w($xs) {
       width: 300px;
       justify-content: space-between;
       margin: 0 auto 15px;
 
-      .filter__item {
+      .mix-nav__item {
         display: inline-block;
         min-width: auto;
         margin-right: 10px;
@@ -47,7 +47,7 @@
     }
   }
 
-  .filter__btn {
+  .mix-nav__btn {
     letter-spacing: 0.06em;
   }
 }

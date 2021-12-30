@@ -1,13 +1,20 @@
 .basket {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 475px;
+  min-height: 100vh;
   z-index: 12;
+  display: flex;
+  flex-direction: column;
 
   @include max-w($md) {
-    position: relative;
     width: 100%;
+    // padding-top: 150px;
+  }
+  
+  @include max-w($xs) {
+    // padding-top: 112px;
   }
 
   &__overlay {
@@ -15,18 +22,13 @@
 
     &--active {
       display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      min-height: 940px;
+      height: 100%;
       background-color: rgba($black, 0.15);
       z-index: 11;
-
-      @include max-w($md) {
-        position: relative;
-        min-height: 0;
-      }
     }
   }
 
@@ -103,14 +105,13 @@
   }
 
   &__list {
-    min-height: 705px;
+    flex-grow: 1;
     background-color: $bg-light;
+    overflow-y: scroll;
     padding: 12px;
 
     @include max-w($md) {
       position: relative;
-      min-height: 0;
-      height: auto;
     }
   }
 
@@ -192,11 +193,15 @@
   }
 
   &__num {
-    margin-right: 12px;
+    margin-right: 12px;    
 
     &.jq-number {
       position: relative;
       padding: 0;
+
+      &.focused .jq-number__field {
+        border: none;
+      }
     }
 
     .jq-number__field {
