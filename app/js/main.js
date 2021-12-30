@@ -9,10 +9,21 @@ $(function () {
   });
 
   // Каталог продуктов
-  $('.product-catalog__btn').on('click', function () {
+  // $('.product-catalog__btn').on('click', function (e) {
+  //   $('.product-catalog__list').slideToggle("300");
+  //   $('.product-catalog__list').toggleClass('product-catalog__list--active');
+  //   $('.product-catalog__btn').toggleClass('product-catalog__btn--active');
+  // });
+
+  // Каталог продуктов, закрытие при щелчке вне открытого списка
+  $('.product-catalog__btn').click(function () {
     $('.product-catalog__list').slideToggle("300");
-    $('.product-catalog__list').toggleClass('product-catalog__list--active');
-    $('.product-catalog__btn').toggleClass('product-catalog__btn--active');
+  });
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.product-catalog').length) {
+      $('.product-catalog__list').hide();
+    }
+    e.stopPropagation();
   });
 
   // Корзина
@@ -35,8 +46,8 @@ $(function () {
   $('.top-slider__slider').slick({
     prevArrow: '<button class="slick-prev" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-left"></use></svg><span class="sr-only">стрелка влево</span></button>',
     nextArrow: '<button class="slick-next" type="button"><svg><use xlink:href="../images/sprite.svg#arrow-right"></use></svg><span class="sr-only">стрелка вправо</span></button>',
-    autoplay: true,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1550,
@@ -235,10 +246,10 @@ $(function () {
   });
 
   // Переключение табов на странице Товара
-  $('.tabs__top-item').on('click', function (e) {
+  $('.tabs__top-link').on('click', function (e) {
     e.preventDefault();
-    $('.tabs__top-item').removeClass('tabs__top-item--active');
-    $(this).addClass('tabs__top-item--active');
+    $('.tabs__top-link').removeClass('tabs__top-link--active');
+    $(this).addClass('tabs__top-link--active');
 
     $('.tabs__content-item').removeClass('tabs__content-item--active');
     $($(this).attr('href')).addClass('tabs__content-item--active');
@@ -253,25 +264,16 @@ $(function () {
 
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 650,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          arrows: false,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
           arrows: false,
           dots: true,
         }

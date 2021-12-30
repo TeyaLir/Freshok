@@ -124,7 +124,9 @@
 
               <li class="user-nav__item user-nav__item--user">
                 <button class="user-nav__link user-nav__link--user" type="button" href="#!">
-                  <span class="sr-only">вход | регистрация</span>
+                  <span class="sr-only">
+                    вход | регистрация
+                  </span>
                 </button>
               </li>
 
@@ -158,49 +160,14 @@
           <button class="menu-mobile__close" type="button"></button>
         </div>
 
-        <button class="menu-mobile__log-reg" type="button">
-          Вход | Регистрация
-        </button>
+        <div class="menu-mobile__log-reg">
+          <a href="#!">Вход</a>|<a href="#!">Регистрация</a> 
+        </div>
 
         <div class="menu-mobile__content">
 
           <div class="product-catalog">
-            <button class="product-catalog__btn" type="button">Каталог товаров</button>
-            <ul class="product-catalog__list">
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Фрукты и овощи</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Зелень</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Ягоды, грибы</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Крупы</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Веганские продукты</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Хлеб</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Сыры</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Рыба</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Вода, напитки</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Чай, кофе</a>
-              </li>
-              <li class="product-catalog__item">
-                <a class="product-catalog__link" href="catalog.html">Молочные продукты</a>
-              </li>
-            </ul>
+            <a class="product-catalog__btn" href="catalog.html">Каталог товаров</a>
           </div>
 
           <address class="menu-mobile__contacts">
@@ -369,18 +336,20 @@
           </li>
         </ul>
 
-        <div class="basket__coutn">
-          <div class="basket__count-subtitle">
-            Товаров на сумму
+        <div class="basket__footer">
+          <div class="basket__coutn">
+            <div class="basket__count-subtitle">
+              Товаров на сумму
+            </div>
+            <div class="basket__count-sum">
+              3648<span>&#8381;</span>
+            </div>
           </div>
-          <div class="basket__count-sum">
-            3648<span>&#8381;</span>
-          </div>
+  
+          <button class="basket__checkout btn" type="submit">
+            Оформить заказ
+          </button>
         </div>
-
-        <button class="basket__checkout btn" type="submit">
-          Оформить заказ
-        </button>
       </div>
     </div>
   </header>

@@ -68,14 +68,12 @@
   }
 
   &__log-reg {
-    border: 0;
-    border-radius: 0;
     width: 100%;
     position: relative;
     background-color: $main;
     color: $white;
     font-size: 18px;
-    padding: 13px 15px 12px 0;
+    padding: 0 15px 0 55px;
 
     &::before {
       content: "";
@@ -93,6 +91,11 @@
     &:active {
       background-color: $main-dark;
     }
+
+    a {
+      display: inline-block;
+      padding: 14px 7px 13px;
+    }
   }
 
   .product-catalog__list {
@@ -108,14 +111,14 @@
       display: block;
 
       &__btn {
+        display: block;
         width: 100%;
-        height: 45px;
         color: $base-light;
         font-size: 18px;
         line-height: 0.9;
         letter-spacing: 0.03em;
         border-radius: 0;
-        padding-left: 10px;
+        padding: 15px 14px 13px 60px;
 
         &::before {
           width: 25px;

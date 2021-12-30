@@ -21,29 +21,29 @@
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="catalog.html">
+              <span class="breadcrumbs__link">
                 Каталог товаров
-              </a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
-
       <div class="container">
         <h1 class="catalog__title">
           Каталог товаров
         </h1>
       </div>
-
       <div class="container">
-        <div class="catalog__wrapp">
+        <div class="catalog__wrap">
           <div class="filters__overlay">
             <section class="filters" data-simplebar data-simplebar-auto-hide="false">
-              <button class="filters__close" type="button"></button>
+              <button class="filters__close" type="button">
+                <span class="sr-only">Закрыть окно фильтров</span>
+              </button>
               <div class="filters-category filters__item">
                 <h2 class="filters__title">Категории</h2>
-                <div class="filters__item-content">
-                  <ul class="filters-category__list" data-simplebar data-simplebar-auto-hide="false">
+                <div class="filters__item-content" data-simplebar data-simplebar-auto-hide="false">
+                  <ul class="filters-category__list">
                     <li class="filters-category__item">
                       <a class="filters-category__link" href="#!">Фрукты и овощи</a>
                     </li>
@@ -102,7 +102,6 @@
                   </form>
                 </div>
               </div>
-
               <div class="filters-brand filters__item">
                 <h2 class="filters__title">Бренд</h2>
                 <div class="filters__item-content">
@@ -140,7 +139,6 @@
                   </form>
                 </div>
               </div>
-
               <div class="filters-price filters__item">
                 <h2 class="filters__title">Цена</h2>
                 <div class="filters__item-content">
@@ -163,30 +161,36 @@
               </div>
             </section>
           </div>
-
           <section class="catalog-content">
             <div class="catalog-content__filters">
               <button class="catalog-content__filters-button"></button>
               <div class="catalog-content__filters-selects">
                 <form class="catalog-content__filters-form" name="catalog-content__filters-form" action="#!">
-                  <select class="catalog-content__filters-sort select-style" name="catalog-content__filters-sort">
-                    <option value="По названию">По названию</option>
-                    <option value="По популярности">По популярности</option>
-                    <option value="Сначала дешевые">Сначала дешевые</option>
-                    <option value="Сначала дорогие">Сначала дорогие</option>
-                    <option value="По алфавиту">По алфавиту</option>
-                  </select>
-                  <select class="catalog-content__filters-show select-style" name="catalog-content__filters-show">
-                    <option value="по 12">по 12</option>
-                    <option value="по 18">по 18</option>
-                    <option value="по 24">по 24</option>
-                    <option value="по 30">по 30</option>
-                    <option value="по 36">по 36</option>
-                  </select>
+                  <label>
+                    <span class="sr-only">Селектор отображения товаров</span>
+                    <select class="catalog-content__filters-sort select-style" name="catalog-content__filters-sort">
+                      <option value="По названию">По названию</option>
+                      <option value="По популярности">По популярности</option>
+                      <option value="Сначала дешевые">Сначала дешевые</option>
+                      <option value="Сначала дорогие">Сначала дорогие</option>
+                      <option value="По алфавиту">По алфавиту</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span class="sr-only">Селектор отображения количества карточек товара на странице</span>
+                    <select class="catalog-content__filters-show select-style" name="catalog-content__filters-show">
+                      <option value="по 12">по 12</option>
+                      <option value="по 18">по 18</option>
+                      <option value="по 24">по 24</option>
+                      <option value="по 30">по 30</option>
+                      <option value="по 36">по 36</option>
+                    </select>
+                  </label>
                 </form>
               </div>
               <div class="catalog-content__filters-buttons">
                 <button class="catalog-content__filters-btn button-list">
+                  <span class="sr-only">Отобразить карточки списком по две в ряду</span>
                   <svg class="catalog-content__svg-list">
                     <use xlink:href="images/sprite.svg#button-list"></use>
                   </svg>
@@ -195,6 +199,7 @@
                   <svg class="catalog-content__svg-grid">
                     <use xlink:href="images/sprite.svg#button-grid"></use>
                   </svg>
+                  <span class="sr-only">Отобразить карточки списком по три в ряду</span>
                 </button>
               </div>
             </div>
@@ -829,12 +834,15 @@
             <div class="catalog-content__bottom">
               <button class="btn" type="button">Показать ещё</button>
               <div class="pagination">
-                <a href="#!" class="pagination__arrows pagination__prev">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-left"></use>
-                  </svg>
-                </a>
                 <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__arrow pagination__arrow--prev" href="#!">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#arrow-left"></use>
+                      </svg>
+                      <span class="sr-only">стрелка влево</span>
+                    </a>
+                  </li>
                   <li class="pagination__item">
                     <a class="pagination__link pagination__link--active" href="#!">1</a>
                   </li>
@@ -850,12 +858,15 @@
                   <li class="pagination__item">
                     <a class="pagination__link" href="#!">10</a>
                   </li>
+                  <li class="pagination__item">
+                    <a class="pagination__arrow pagination__arrow--next" href="#!">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                      </svg>
+                      <span class="sr-only">стрелка вправо</span>
+                    </a>
+                  </li>
                 </ul>
-                <a href="#!" class="pagination__arrows pagination__next">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
-                  </svg>
-                </a>
               </div>
             </div>
           </section>

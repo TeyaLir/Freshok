@@ -72,6 +72,7 @@
           </li>
         </ul>
       </section>
+
       <section class="benefits">
         <h2 class="sr-only">Наши преимущества</h2>
         <div class="container">
@@ -97,32 +98,33 @@
           </ul>
         </div>
       </section>
+
       <section class="goods-top" data-ref="mixfilter-1">
         <div class="container">
           <h2 class="title">Топовые товары</h2>
-          <ul class="filter">
-            <li class="filter__item">
-              <button class="filter__btn" data-filter="all" type="button">
+          <ul class="mix-nav">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter="all" type="button">
                 Все товары
               </button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".fruits" type="button">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".fruits" type="button">
                 Фрукты
               </button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".vegetables" type="button">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".vegetables" type="button">
                 Овощи
               </button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".drinks" type="button">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".drinks" type="button">
                 Напитки
               </button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".grocery" type="button">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".grocery" type="button">
                 Бакалея
               </button>
             </li>
@@ -484,7 +486,9 @@
           <button class="btn btn--light" type="button">Показать ещё</button>
         </div>
       </section>
-      <div class="banner">
+
+      <section class="banner">
+        <h2 class="sr-only">Наши акции и скидки</h2>
         <div class="container">
           <ul class="banner__list">
             <li class="banner__item banner__item--big banner__item--light" style="background-image: url('images/banner/veg.jpg');">
@@ -504,19 +508,20 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
+
       <section class="goods-promo" id="promo" data-ref="mixfilter-2">
         <div class="container">
           <h2 class="title">Акции</h2>
-          <ul class="filter goods-promo__filter">
-            <li class="filter__item">
-              <button class="filter__btn" data-filter="all" type="button">Все товары</button>
+          <ul class="mix-nav goods-promo__mix-nav">
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter="all" type="button">Все товары</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".new" type="button">Новинки</button>
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".new" type="button">Новинки</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__btn" data-filter=".hit" type="button">Хиты</button>
+            <li class="mix-nav__item">
+              <button class="mix-nav__btn" data-filter=".hit" type="button">Хиты</button>
             </li>
           </ul>
           <ul class="goods-promo__content">
@@ -821,7 +826,9 @@
           <button class="btn" type="button">Показать ещё</button>
         </div>
       </section>
-      <div class="brands">
+
+      <section class="brands">
+        <h2 class="sr-only">Наши партнёры</h2>
         <div class="container">
           <ul class="brands__list">
             <li class="brands__item">
@@ -886,51 +893,55 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
+
       <section class="news" id="news">
         <div class="container">
           <div class="news__heading">
             <h2 class="title news__title">Наши новости</h2>
             <a class="news__link" href="#!">Все новости</a>
           </div>
+
           <ul class="news__list">
             <li class="news__item">
-              <article class="news__card">
-                <a class="news__card-link" href="#!">
-                  <time datetime="2021-07-15" class="news__date">
-                    <span class="news__month">декабрь</span>
-                    <span class="news__number">15</span>
+              <article class="news-card">
+                <a class="news-card__link" href="#!">
+                  <time datetime="2021-07-15" class="news-card__date">
+                    <span class="news-card__month">декабрь</span>
+                    <span class="news-card__number">15</span>
                   </time>
-                  <img class="news__img" src="images/news/red-caviar.jpg" alt="фото красной икры">
-                  <h3 class="news__text">
+                  <img class="news-card__img" src="images/news/red-caviar.jpg" alt="фото красной икры">
+                  <h3 class="news-card__text">
                     Как выбрать красную икру? О видах, упаковке и пользе деликатеса
                   </h3>
                 </a>
               </article>
             </li>
+
             <li class="news__item">
-              <article class="news__card">
-                <a class="news__card-link" href="#!">
-                  <time datetime="2021-05-07" class="news__date">
-                    <span class="news__month">ноябрь</span>
-                    <span class="news__number">07</span>
+              <article class="news-card">
+                <a class="news-card__link" href="#!">
+                  <time datetime="2021-05-07" class="news-card__date">
+                    <span class="news-card__month">ноябрь</span>
+                    <span class="news-card__number">07</span>
                   </time>
-                  <img class="news__img" src="images/news/blue-cheese.jpg" alt="фото сыра с плесенью">
-                  <h3 class="news__text">
+                  <img class="news-card__img" src="images/news/blue-cheese.jpg" alt="фото сыра с плесенью">
+                  <h3 class="news-card__text">
                     Сыры с плесенью: что о них нужно знать
                   </h3>
                 </a>
               </article>
             </li>
+
             <li class="news__item">
-              <article class="news__card">
-                <a class="news__card-link" href="#!">
-                  <time datetime="2021-02-20" class="news__date">
-                    <span class="news__month">октябрь</span>
-                    <span class="news__number">11</span>
+              <article class="news-card">
+                <a class="news-card__link" href="#!">
+                  <time datetime="2021-02-20" class="news-card__date">
+                    <span class="news-card__month">октябрь</span>
+                    <span class="news-card__number">11</span>
                   </time>
-                  <img class="news__img" src="images/news/nuts.jpg" alt="фото орехов">
-                  <h3 class="news__text">
+                  <img class="news-card__img" src="images/news/nuts.jpg" alt="фото орехов">
+                  <h3 class="news-card__text">
                     10 полезных орехов: как понять, какие стоит есть именно вам
                   </h3>
                 </a>
